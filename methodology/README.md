@@ -31,6 +31,8 @@ instead of AI agents**. (The simulation that *realizes* it on the Orkestron stac
 | [`Markets-and-Civilizational-Value.md`](./Markets-and-Civilizational-Value.md) | Reconciling revealed (market) vs deliberative (state) value; the market clears, the state prices the externality residual; profit decoupled from civ-value |
 | [`Value-Money-Coupling.md`](./Value-Money-Coupling.md) | Instant enforcement (escrow, continuous anti-value debit, concentration charge, standing loss) + retrospective clawback; finality for the honest, perpetual liability for the concealing |
 | [`Courts-and-Adjudication.md`](./Courts-and-Adjudication.md) | Anti-value is interpretable but contestable; courts judge by **contemporaneous norms**; versioned norm-set; non-retroactivity |
+| [`Value-Frames-and-Perspectival-Value.md`](./Value-Frames-and-Perspectival-Value.md) | **VMT grounding.** Value is perspectival; MOS = a **federation of value systems** (frames), not one ledger; no state apex (forbidden by T1/A12/A10); participation condition θ; terminology aligned to VMT canon |
+| [`Anti-Value-Taxonomy.md`](./Anti-Value-Taxonomy.md) | Anti-value classified by **scope** (edge/systemic), **detection lag** (→ enforcement instrument), and **type**; responsibility share (Shapley-style attribution); three worked profiles (yogurt / content-dependency / BigTech) through Planned→Realized→Retrospective |
 | [`meta-models.csv`](./meta-models.csv) | Machine-readable registry of the ~30 meta-models (the semantic model of the state) |
 
 All documents are **DRAFT, under discussion** — not yet ratified.
