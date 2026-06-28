@@ -81,6 +81,15 @@ These compile into `A1 State/Constitution` and `E4 ControlPolicy` as checkable r
 13. **Generosity outranks accumulation.** Producing value and *not consuming it* (donating
     it) books additional value — the gradient of the system points toward solidarity, not
     hoarding. Recognition is **peer-issued, not state-issued**. (See §B0.4.)
+14. **Non-retroactivity / contemporaneous judgment.** Acts are judged by the norm-set
+    (weights, corridors, pricing function) in force *when they were committed* — the
+    value-flow analogue of no-ex-post-facto law. **Evidence updates retroactively; norms do
+    not.** Revaluation re-prices with new evidence but contemporaneous norms.
+    (See `Courts-and-Adjudication.md`.)
+15. **Interpretive authority is rebuttable.** Value/anti-value are interpretable; a state
+    agent's assessment is authoritative-by-default but **contestable in court**. Trust
+    derives from transparency + calibration, not infallibility. No final unaccountable
+    authority. (See `Courts-and-Adjudication.md`.)
 
 ---
 

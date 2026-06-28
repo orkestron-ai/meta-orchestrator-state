@@ -106,7 +106,7 @@ The Agent Hub is built to host many long-lived agents with horizontal scaling
 and has a **compute exchange** for cheap pooled inference. That is exactly what lets the
 citizen population run **off the owner's personal subscription** and on **tiered, mostly
 non-frontier (or non-LLM) inference**. Full capacity strategy is in
-[`Meta-Orchestrator-State-Project.md`](./Meta-Orchestrator-State-Project.md) §7.
+[`Meta-Orchestrator-State-Project.md`](../Meta-Orchestrator-State-Project.md) §7.
 
 ---
 
