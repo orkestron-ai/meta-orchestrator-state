@@ -39,6 +39,9 @@ value** (acting hard on un-attested value causes policy whiplash).
 
 ## A0 — Principles (constitutional invariants)
 
+> **These 15 principles are the annotated source of the [`Charter`](./Charter.md) articles.**
+> The Charter is the canonical, ratifiable supreme document; this list is its reasoning.
+
 These compile into `A1 State/Constitution` and `E4 ControlPolicy` as checkable rules.
 
 1. **Imbalance is the only governing signal.** The state corrects measured imbalance in
