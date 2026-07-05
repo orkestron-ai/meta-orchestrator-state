@@ -34,6 +34,18 @@ the **claimed-vs-attested gap is the organ's performance/leakage**; and this att
 organ's standing, autonomy, funding, and continuation. **The state grades itself by its own
 ledger.**
 
+### 1.1 Human or AI — the position goes to whoever delivers more attested value
+Every role in **every branch** — a party, a minister, a municipal executive, a judge, even a
+**citizen** — may be held by a **human or an AI agent** (MOS exists partly to explore this). The
+choice is **not ideological:** because a position's KPI is **citizen-attested value delivered**, the
+role goes to whoever — human or AI — delivers more of it. Since attestation captures **received
+quality, not just throughput**, **humans may win exactly where quality / judgment / trust /
+legitimacy outweigh speed and scale**, while AI wins where tireless speed, scale, and consistency
+dominate. A few roles are **constitutionally human-reserved** for legitimacy/accountability (apex
+constitutional adjudication; constituent power; and — per D4 — the human liability chain for
+governance). Whether a **citizen** may be an AI agent is itself a constitutional choice of each
+polity (and a core MOS experiment).
+
 ## 2. The three branches (+ municipalities)
 | Branch | Who | What it does | How citizens drive it |
 |---|---|---|---|
@@ -63,23 +75,31 @@ D4). Each:
 A ministry that claims value citizens don't attest accrues **flow resistance** and loses standing,
 funding, and autonomy — the same mechanism applied to any transformer.
 
-## 4. The fiscal reframe — budget, "taxes," excises when money is demoted
-Because **you own what you create**, the state does **not** fund itself by taxing earned value
-(labour/income/production). The tax base **shifts from the earned to the unearned + the harmful:**
+## 4. The fiscal reframe — a democratically-chosen revenue mix
+The doctrine does **not** dogmatically fix a single tax base. It fixes only **constraints** —
+*don't let money buy governance power; keep floors funded; price externalities* — and leaves the
+**revenue mix as a per-polity democratic dial.** (This answers the objection that rent alone may be
+too small: a state with no resources or public property can fund itself from the other channels.)
 
-**Revenue (what funds the state):**
-- **Commons rent — the primary base.** Unearned rent (land/location, natural resources, spectrum,
-  and crucially **AI-compute/data/network-effects**) flows to a **Commons Fund.** This is the
-  Georgist move generalized: fund the state from *what nobody created*, not from *what people did
-  create.*
-- **Externality (Pigouvian) charges** — anti-value charges on harmful flows. **Excises are simply
-  Pigouvian charges on harmful goods** (a "sin tax" is an externality charge) — they fold into the
-  externality overlay, not a separate levy.
-- **Concentration charges** (above-ceiling accumulation) and **escrow/clawback recoveries** (earmarked
-  to the harmed).
-- **Income/production tax largely disappears** — taxing creation contradicts the property principle.
-  *(Honest flag: whether rent + externalities suffice to fund a full state is an empirical question —
-  a first-order thing for the simulation to test.)*
+**Revenue channels (the polity votes the mix):**
+- **Commons rent** — unearned rent (land/location, natural resources, spectrum, and crucially
+  **AI-compute/data/network-effects**) → the **Commons Fund.** The Georgist move (fund the state from
+  *what nobody created*); primary **where it is abundant.**
+- **Pigouvian externality & excise charges** — anti-value charges on harmful flows; an
+  **excise / "sin tax" is just an externality charge**; corrective *and* revenue.
+- **Concentration charges + escrow/clawback recoveries** (earmarked to the harmed).
+- **A voted contribution on earned value** — an income/production contribution **is allowed if
+  citizens vote it**; it is *not* forbidden. For **rent-poor states it may be the main base.** It is
+  reconciled with "own the earned" by framing it as **payment for the *commons inputs* you consumed
+  while earning** (security, infrastructure, the knowledge commons) — you still pay for the *unearned*
+  inputs, measured via income as a proxy.
+- **Incentivized donation** — companies/citizens may **donate value to the state**, which **raises
+  their civic standing / value-to-the-state** in exchange for **cheap-to-provide benefits**
+  (recognition, priority access, honours). A positive-sum flow: pay the donor **in their own frame**
+  (inter-frame routing), channelling the **generosity multiplier** into public finance.
+
+*(Honest flag: whether any given mix funds a full state is empirical — a first-order thing for the
+simulation to test. The point is the mix is **chosen and plural**, not fixed.)*
 
 **Expenditure (how funds flow as financing along value flows):**
 - **The citizen dividend** — the rent-funded material floor guarantee (everyone's baseline
