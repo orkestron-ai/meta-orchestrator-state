@@ -25,6 +25,7 @@ instead of AI agents**. (The simulation that *realizes* it on the Orkestron stac
 
 | File | What it holds |
 |------|---------------|
+| **[`Axiacracy-Compendium.md`](./Axiacracy-Compendium.md)** | **★★ START HERE — single-source overview of the whole doctrine** (synthesizes every doc + the Charter + the registry, end to end) |
 | **[`Charter.md`](./Charter.md)** | **★ The supreme document (meta-constitution, jus cogens).** 22 articles in 6 parts — the value-balancing mandate, inviolable rights & per-cohort floors, governance principles, money/markets, epistemic & judicial integrity, supremacy & eternity clause. Everything else elaborates it |
 | [`Governance-Mechanics.md`](./Governance-Mechanics.md) | **Core rationale.** Principles A0 (15, the annotated source of the Charter articles), organizational mechanics B0 (minority protection, parties = liquid democracy, experts/anti-propaganda, peer recognition), communication & transparency C0 |
 | [`Value-Axes-Corridors-Voting.md`](./Value-Axes-Corridors-Voting.md) | The 10 value axes, per-cohort/region corridors, quadratic weight voting + delegation, the imbalance signal (floor/equity penalties not weight-scaled) |
