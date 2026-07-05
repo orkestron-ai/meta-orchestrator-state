@@ -1,10 +1,17 @@
 # Axiacracy — Maturity Critique Prompt
 
 *Paste the prompt below into a strong reasoning model (or give it to human expert reviewers),
-attaching [`methodology/Axiacracy-Compendium.md`](methodology/Axiacracy-Compendium.md) — and,
-for depth, the detailed docs in `methodology/`. Goal: mature the doctrine until a simulation
-or a playable online world can be built **without the implementation raising questions about
-the description itself**.*
+attaching **[`methodology/Axiacracy-Full-Specification.md`](methodology/Axiacracy-Full-Specification.md)**
+(the complete, unambiguous description — use this, not the terse compendium) — and, for depth,
+the detailed docs in `methodology/`. Goal: mature the doctrine until a simulation or a playable
+online world can be built **without the implementation raising questions about the description
+itself**.*
+
+> **Note for the reviewer:** the Full Specification reflects the "sensing vs. coercion" synthesis
+> (v2) and opens with **seven pre-empted misreadings** plus a **§IX "known limits & open work".**
+> Please verify whether the synthesis *actually* resolves the measurement / pluralism / coercion
+> objections, and **concentrate new fire on the §IX open items** rather than re-raising what §0
+> and §IX already address.
 
 > **Usage modes.** (1) **One-shot panel** — run the whole prompt once. (2) **Persona rotation**
 > — run it once per reviewer persona (§Reviewers) for depth, then dedupe. (3) **Adversarial
