@@ -108,9 +108,28 @@ money* forces the state to spend money. Money is used only where it is the cheap
 - **Exit / θ is the check.** If it is coercive, θ is violated and the actor exits (T7). The
   right to exit disciplines the state.
 
+## Part 3 — Privacy-preserving frame disclosure (how the state learns a frame without reading the ledger)
+
+The state must learn the **shape** of an actor's frame without the **raw ledger**. Design:
+
+- **A scoped access grant** (reuse orkestro.net AccessGrant: scoped, time-limited) yields
+  **not transactions but a derived frame summary** — axis-weights + top value-categories,
+  computed from the actor's **highest realized/given flows** (what delivered them the most
+  value per unit given → their strongest preferences). The **raw flows never cross the
+  boundary** (A10 — only a *projection* does).
+- **Computed locally by the actor's own agent, published at a granularity the actor
+  chooses.** More disclosure → better-targeted incentives *for them* (an opt-in benefit);
+  less → more privacy. This is the actor's dial (the "serve, not surveil" guardrail).
+- **Default = cohort aggregates only** (differential privacy / k-anonymity), individuals
+  non-identifiable. **Individual disclosure is opt-in**, justified by the personalized
+  benefit (targeted incentives, matchmaking).
+- **Zero-knowledge / attestation:** an actor can *prove* a frame property ("I value
+  education highly") without revealing the underlying transactions.
+
+Net: the state sees the **form** of the frame, never the **contents** of the ledger.
+
 ## Open knobs for the owner
-- How does an actor *declare* its frame to the ledger (explicit profile vs inferred from
-  boundary flows), and at what granularity?
+- Frame-summary granularity levels and the exact "top realized/given" extraction function.
 - Matchmaking scope in P0: pairwise only, or multi-party value composition?
 - The reference basket (numéraire) definition for cross-region realized-Æ comparison.
 - Limits on state incentive-targeting to keep it "serve, not shape" (audit of incentives).
