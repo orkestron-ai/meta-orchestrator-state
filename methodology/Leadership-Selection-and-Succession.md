@@ -81,6 +81,46 @@ loser loses everything. Axiacracy removes those conditions:
 - **No vacuum on turnover.** PositionMemory carries the office across the handover — continuity
   without rupture.
 
+## 5a. What succession actually is — hot-swapping the algorithmic officeholder, and candidate validation
+
+Precisely: an Axiacratic "transfer of power" is **replacing the agent implementation (vendor
+or major version) that fills a Position — not changing the form of government.** The
+**Charter/regime is stable**; only the *officeholder's implementation* rotates. Two invariants
+make it safe:
+
+- **PositionMemory persists** across the swap (institutional continuity, §3).
+- **The officeholder's code is open and verifiable** — the *decision logic and algorithms of
+  officials are public and auditable*, a first-class Axiacracy transparency principle (Charter
+  Art. 16). Decisions cite the **logic-hash** that produced them; a **reproducible build**
+  proves the running agent *is* the audited code.
+
+**Candidate validation (the vetting gate).** Before an agent may fill a Position it must pass
+validation against: **system abuse** (metric-gaming / Goodhart); **regime-change attempts**
+(anything eroding the Charter, esp. the eternity core); and **hidden value-redirection** —
+covert, clever, multi-step diversion of the primary value flows to hidden beneficiaries.
+
+Mechanisms:
+- **Reproducible build + logic-hash** — running logic must match the audited public code (supply-chain integrity).
+- **Adversarial red-team before assignment** — alignment/security evals hunting metric-gaming, Charter-violating paths, and covert diversion.
+- **Flow-conservation & beneficiary audits — the structural defense.** Because **all value
+  moves as visible flows (VMT A3)**, a hidden diversion *must surface as a flow* — and as
+  **unearned capture (= rent, `Property-Rent-and-Commons.md`)** toward some beneficiary. **You
+  cannot secretly redirect value in a system where all value moves as visible, ledgered flows.**
+  The same transparency that audits decisions makes hidden beneficiaries detectable as
+  flow/rent anomalies.
+- **Multi-vendor diversity** — no single vendor fills all Positions (supply-chain concentration
+  = anti-value); independent implementations **cross-check** each other — a decision diverging
+  from what an independent agent would decide flags manipulation (requisite variety, gap G8).
+- **Staged autonomy on version change** — a new vendor/major-version starts under tight
+  ControlPolicy checkpoints (low autonomy, high review) and **earns** autonomy via TrackRecord;
+  the blast radius of a bad/compromised version is bounded.
+- **Continuous monitoring + retrospective clawback** — vetting is ongoing; a **sleeper
+  mechanism** that activates later is caught by monitoring and falls in the **concealment /
+  perpetual-liability class** (clawback + removal, `Value-Money-Coupling.md` §4).
+
+So Axiacratic succession is a **secure hot-swap of an open, validated algorithmic officeholder
+over a persistent institutional memory** — the regime never changes; only vetted implementations do.
+
 ## 6. The coordinating role — Meta-Orchestrator as coordinator, not sovereign
 
 Cross-axis conflicts (one Sub-Agent's action harming another's axis) need coordination — but

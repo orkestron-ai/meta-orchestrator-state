@@ -89,6 +89,33 @@ its **location rent** (created by the community, not by you) is **commons-owed**
 value-ledger analogue of the Georgist land-value tax). This defuses **housing-as-speculation**
 — a prime channel of the value concentration the article warns of.
 
+## 6a. Renting, leasing & inheritance — earned service vs unearned rent *(clarification)*
+
+**Not all rental income is unearned rent.** The split applies to the income **decomposed**,
+not to "renting" as an activity.
+
+- **Renting out a produced asset** (a car, tools, equipment, a building's **structure**) is
+  **earned service income**: you provide real use-value (mobility, capability), bear
+  depreciation, maintenance and risk, and tie up earned capital. Income ≈ value created →
+  **earned.** A car is not land; it carries no community-created location rent.
+- **Real estate splits in two** (classic Georgism taxes *land*, never *improvements*): the
+  **structure** you built/maintain and the **service of providing it** are **earned**; only
+  the **land/location** component — value the community created, not you — is **unearned →
+  commons-owed.** You may build, hold and rent a building; you owe commons-rent only on the
+  land under it.
+- **The measure discriminates automatically.** `unearned = captured − created`. A
+  competitively priced rental: captured ≈ created → **no unearned rent**. A **scarcity/monopoly**
+  rental (you control all the cars in town and gouge): the **excess above competitive** is
+  unearned → charged. We never hand-classify "rentals bad" — the ledger measures the excess.
+- **Inheritance.** Produced assets are private and **bequeathable** — a gift of the owner's
+  earned value; you may inherit a house or a business you cannot use yourself. Three limits stop
+  it becoming dynastic power: (i) the **land/location rent stays commons-owed** whoever holds
+  title; (ii) the **concentration ceiling** still applies — a modest inheritance passes freely, a
+  dynastic mega-estate triggers concentration charges; (iii) **Æ/standing is non-transferable**
+  — you inherit *goods*, never *civic power/reputation*. "You can't live in it yourself" is fine:
+  you may **hold, use, rent** (earning on the structure, owing on the land), **or transfer** it —
+  nothing forces occupancy.
+
 ## 7. Capital, investment & credit when money is demoted *(the hard part — most speculative)*
 
 If Æ is non-transferable and money is only a settlement rail, how is **long-horizon value
