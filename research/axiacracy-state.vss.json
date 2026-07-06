@@ -1,0 +1,85 @@
+{
+  "schema": {
+    "id": "axiacracy-state-v0",
+    "title": "Axiacracy — State Value System (starter VSS)",
+    "description": "Representative value-flow map of a value-flow-governed state, grounded in the empirical survey. Nodes = value transformers (citizen cohorts, households, business, the commons, the three state functions, guardians, external actors). Flows carry value and anti-value elements. Magnitudes are placeholder (unit 'rel') pending quantification. Boundary flows use external_in/external_out.",
+    "version": "0.1",
+    "author": "Victor Bolshakov / Orkestron.AI",
+    "created_at": "2026-07-06T00:00:00Z",
+    "updated_at": "2026-07-06T00:00:00Z"
+  },
+  "nodes": [
+    { "id": "n_nat", "name": "Nature & subsoil", "position": { "x": 40, "y": 70 }, "size": { "width": 180, "height": 70 }, "description": "Natural resources, land, ecosystems — external source of rent and ecosystem services.", "bpmn_link": "", "link": "", "attributes": { "layer": "external" } },
+    { "id": "n_for", "name": "Foreign markets", "position": { "x": 40, "y": 190 }, "size": { "width": 180, "height": 70 }, "description": "Trade partners — imports (value in) and exports (value out).", "bpmn_link": "", "link": "", "attributes": { "layer": "external" } },
+    { "id": "n_pol", "name": "Other polities", "position": { "x": 40, "y": 310 }, "size": { "width": 180, "height": 70 }, "description": "Foreign states, alliances, international organizations — treaties, aid, recognition.", "bpmn_link": "", "link": "", "attributes": { "layer": "external" } },
+    { "id": "n_dia", "name": "Diaspora", "position": { "x": 40, "y": 430 }, "size": { "width": 180, "height": 70 }, "description": "Emigrants abroad — remittances, soft power, return skills.", "bpmn_link": "", "link": "", "attributes": { "layer": "external" } },
+
+    { "id": "n_land", "name": "Land · compute · data (commons)", "position": { "x": 360, "y": 90 }, "size": { "width": 200, "height": 80 }, "description": "The commons: land/resources, spectrum, and AI-compute/data/network-effects (the new land) — source of unearned rent.", "bpmn_link": "", "link": "", "attributes": { "layer": "commons" } },
+    { "id": "n_fund", "name": "Commons Fund", "position": { "x": 360, "y": 300 }, "size": { "width": 200, "height": 90 }, "description": "Fiscal hub: unearned rent + externality/concentration charges pool here; flows out as dividend/floors and strategic financing.", "bpmn_link": "", "link": "", "attributes": { "layer": "commons" } },
+
+    { "id": "n_cit", "name": "Citizens (life-cycle cohorts)", "position": { "x": 720, "y": 90 }, "size": { "width": 200, "height": 90 }, "description": "Citizens across the life-cycle: child, student, worker, parent, unemployed/disabled, pensioner. Value transformers on all axes.", "bpmn_link": "", "link": "", "attributes": { "layer": "society", "cohorts": "child,student,worker,parent,unemployed,disabled,pensioner,veteran,low_income,large_family" } },
+    { "id": "n_fam", "name": "Households / families", "position": { "x": 720, "y": 300 }, "size": { "width": 180, "height": 70 }, "description": "Families as their own value systems: care, cohesion, demographic reproduction; sensed only at the boundary.", "bpmn_link": "", "link": "", "attributes": { "layer": "society" } },
+    { "id": "n_biz", "name": "Organizations · business · AI-infra", "position": { "x": 720, "y": 470 }, "size": { "width": 200, "height": 90 }, "description": "Firms and AI-infrastructure owners: produce economic value + externalities; market-cleared, externality-priced by the state.", "bpmn_link": "", "link": "", "attributes": { "layer": "society" } },
+
+    { "id": "n_leg", "name": "Legislative — priorities", "position": { "x": 1080, "y": 60 }, "size": { "width": 190, "height": 70 }, "description": "The demos: sets value weights w(t) and floors (directly + via parties).", "bpmn_link": "", "link": "", "attributes": { "layer": "state" } },
+    { "id": "n_exe", "name": "Executive — deliver / balance", "position": { "x": 1080, "y": 220 }, "size": { "width": 200, "height": 90 }, "description": "Ministries (Sub-Agents), one per flow-domain: sense to finance to deliver/balance. Expand each via node link to its own VSS.", "bpmn_link": "", "link": "", "attributes": { "layer": "state" } },
+    { "id": "n_jud", "name": "Judicial — rebalance harms", "position": { "x": 1080, "y": 400 }, "size": { "width": 190, "height": 70 }, "description": "Measures harmful events, restores across axes, deters proportionally.", "bpmn_link": "", "link": "", "attributes": { "layer": "state" } },
+    { "id": "n_grd", "name": "Guardians — Equity·Standards·Audit", "position": { "x": 1080, "y": 540 }, "size": { "width": 200, "height": 70 }, "description": "Equity/Ombudsman, Standards & Measurement Authority (accounting rules), Audit & Integrity.", "bpmn_link": "", "link": "", "attributes": { "layer": "state" } }
+  ],
+  "flows": [
+    { "id": "f1", "name": "Resource rent inflow", "type": "external_in", "source_node_id": "n_nat", "target_node_id": "n_land", "value": 3, "unit": "rel", "color": "#2e8b57", "show_label": true, "element_type_ids": ["e1"], "attributes": {} },
+    { "id": "f2", "name": "Imports (value in)", "type": "external_in", "source_node_id": "n_for", "target_node_id": "n_biz", "value": 2, "unit": "rel", "color": "#2e8b57", "show_label": true, "element_type_ids": [], "attributes": {} },
+    { "id": "f3", "name": "Exports (value out)", "type": "external_out", "source_node_id": "n_biz", "target_node_id": "n_for", "value": 2, "unit": "rel", "color": "#b8860b", "show_label": true, "element_type_ids": [], "attributes": {} },
+    { "id": "f4", "name": "Aid · treaties · recognition (in)", "type": "external_in", "source_node_id": "n_pol", "target_node_id": "n_exe", "value": 1, "unit": "rel", "color": "#2e8b57", "show_label": true, "element_type_ids": [], "attributes": {} },
+    { "id": "f5", "name": "Contributions · recognition (out)", "type": "external_out", "source_node_id": "n_exe", "target_node_id": "n_pol", "value": 1, "unit": "rel", "color": "#b8860b", "show_label": false, "element_type_ids": [], "attributes": {} },
+    { "id": "f6", "name": "Diaspora remittances", "type": "external_in", "source_node_id": "n_dia", "target_node_id": "n_cit", "value": 1, "unit": "rel", "color": "#2e8b57", "show_label": true, "element_type_ids": [], "attributes": {} },
+
+    { "id": "f7", "name": "Commons rent (land/compute/data)", "type": "internal", "source_node_id": "n_land", "target_node_id": "n_fund", "value": 3, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e2"], "attributes": {} },
+    { "id": "f8", "name": "Externality & concentration charges", "type": "internal", "source_node_id": "n_biz", "target_node_id": "n_fund", "value": 2, "unit": "rel", "color": "#c0392b", "show_label": true, "element_type_ids": ["e3", "e4"], "attributes": { "note": "carries anti-value priced back to source" } },
+    { "id": "f9", "name": "Dividend / material floors", "type": "internal", "source_node_id": "n_fund", "target_node_id": "n_cit", "value": 3, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e5", "e6"], "attributes": {} },
+    { "id": "f10", "name": "Public financing", "type": "internal", "source_node_id": "n_fund", "target_node_id": "n_exe", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": [], "attributes": {} },
+
+    { "id": "f11", "name": "Contribution / labour", "type": "internal", "source_node_id": "n_cit", "target_node_id": "n_biz", "value": 3, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e7"], "attributes": {} },
+    { "id": "f12", "name": "Goods & services (market)", "type": "internal", "source_node_id": "n_biz", "target_node_id": "n_cit", "value": 3, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e8", "e9"], "attributes": {} },
+
+    { "id": "f13", "name": "Care · household value", "type": "internal", "source_node_id": "n_cit", "target_node_id": "n_fam", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": false, "element_type_ids": [], "attributes": {} },
+    { "id": "f14", "name": "Demographic value (children)", "type": "internal", "source_node_id": "n_fam", "target_node_id": "n_exe", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e10"], "attributes": {} },
+    { "id": "f15", "name": "Recognition · generosity", "type": "internal", "source_node_id": "n_cit", "target_node_id": "n_cit", "value": 1, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": [], "attributes": { "note": "peer-to-peer self-loop" } },
+
+    { "id": "f16", "name": "Votes · needs · attestation", "type": "internal", "source_node_id": "n_cit", "target_node_id": "n_leg", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e11"], "attributes": {} },
+    { "id": "f17", "name": "Non-tax civic value (service · data · compliance · trust)", "type": "internal", "source_node_id": "n_cit", "target_node_id": "n_exe", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e12", "e13"], "attributes": {} },
+    { "id": "f18", "name": "Value delivered (health · education · pension · safety)", "type": "internal", "source_node_id": "n_exe", "target_node_id": "n_cit", "value": 3, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e14"], "attributes": {} },
+    { "id": "f19", "name": "Restoration + protection", "type": "internal", "source_node_id": "n_jud", "target_node_id": "n_cit", "value": 1, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e15"], "attributes": {} },
+
+    { "id": "f20", "name": "Weights / floors (priorities)", "type": "internal", "source_node_id": "n_leg", "target_node_id": "n_exe", "value": 1, "unit": "rel", "color": "#7c4dff", "show_label": true, "element_type_ids": [], "attributes": { "note": "control signal, not a value transfer" } },
+    { "id": "f21", "name": "Accounting rules · confidence · equity", "type": "internal", "source_node_id": "n_grd", "target_node_id": "n_exe", "value": 1, "unit": "rel", "color": "#7c4dff", "show_label": true, "element_type_ids": [], "attributes": { "note": "governs the measurement layer" } },
+
+    { "id": "f22", "name": "Non-tax business value (jobs · data · innovation · mobilization)", "type": "internal", "source_node_id": "n_biz", "target_node_id": "n_exe", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e16"], "attributes": {} },
+    { "id": "f23", "name": "Financing · incentives · legal order · infrastructure", "type": "internal", "source_node_id": "n_exe", "target_node_id": "n_biz", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": [], "attributes": {} }
+  ],
+  "elements": [
+    { "id": "e1", "name": "Resource rent", "kind": "value", "sign": 1, "quantity": 3, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f1", "attributes": { "axis": "economic" } },
+    { "id": "e2", "name": "Unearned rent (land/compute/data)", "kind": "value", "sign": 1, "quantity": 3, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f7", "attributes": { "axis": "economic", "note": "commons-owed" } },
+    { "id": "e3", "name": "Ecological harm", "kind": "anti_value", "sign": -1, "quantity": 1, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f8", "attributes": { "axis": "ecological" } },
+    { "id": "e4", "name": "Value concentration", "kind": "anti_value", "sign": -1, "quantity": 1, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f8", "attributes": { "axis": "economic" } },
+    { "id": "e5", "name": "Dividend / economic floor", "kind": "value", "sign": 1, "quantity": 2, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f9", "attributes": { "axis": "economic" } },
+    { "id": "e6", "name": "Health & education access", "kind": "value", "sign": 1, "quantity": 2, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f9", "attributes": { "axis": "cognitive,demographic" } },
+    { "id": "e7", "name": "Labour & human capital", "kind": "value", "sign": 1, "quantity": 3, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f11", "attributes": { "axis": "economic" } },
+    { "id": "e8", "name": "Goods & services", "kind": "value", "sign": 1, "quantity": 3, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f12", "attributes": { "axis": "economic" } },
+    { "id": "e9", "name": "Cognitive dependency", "kind": "anti_value", "sign": -1, "quantity": 1, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f12", "attributes": { "axis": "cognitive", "note": "on attention-capturing goods" } },
+    { "id": "e10", "name": "Demographic value (children)", "kind": "value", "sign": 1, "quantity": 2, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f14", "attributes": { "axis": "demographic" } },
+    { "id": "e11", "name": "Legitimacy & consent", "kind": "value", "sign": 1, "quantity": 2, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f16", "attributes": { "axis": "social_stability" } },
+    { "id": "e12", "name": "Personal data", "kind": "value", "sign": 1, "quantity": 1, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f17", "attributes": { "axis": "epistemic" } },
+    { "id": "e13", "name": "Civic / military service", "kind": "value", "sign": 1, "quantity": 1, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f17", "attributes": { "axis": "social_stability,infrastructural" } },
+    { "id": "e14", "name": "Delivered services (health/edu/pension)", "kind": "value", "sign": 1, "quantity": 3, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f18", "attributes": { "axis": "cognitive,demographic,economic" } },
+    { "id": "e15", "name": "Restoration & social stability", "kind": "value", "sign": 1, "quantity": 1, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f19", "attributes": { "axis": "social_stability,meaning" } },
+    { "id": "e16", "name": "Jobs · innovation · mobilization", "kind": "value", "sign": 1, "quantity": 2, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f22", "attributes": { "axis": "economic,infrastructural" } }
+  ],
+  "texts": [
+    { "id": "t1", "x": 40, "y": 36, "text": "EXTERNAL BOUNDARY" },
+    { "id": "t2", "x": 360, "y": 36, "text": "THE COMMONS" },
+    { "id": "t3", "x": 720, "y": 36, "text": "SOCIETY" },
+    { "id": "t4", "x": 1080, "y": 36, "text": "STATE — value-flow functions" },
+    { "id": "t5", "x": 360, "y": 640, "text": "Solid blue = internal value flow · red = anti-value priced back · gold = external outflow · green = external inflow · purple = control signal (weights/rules)" }
+  ]
+}
