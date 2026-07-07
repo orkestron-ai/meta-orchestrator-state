@@ -1,85 +1,3679 @@
 {
-  "schema": {
-    "id": "axiacracy-state-v0",
-    "title": "Axiacracy — State Value System (starter VSS)",
-    "description": "Representative value-flow map of a value-flow-governed state, grounded in the empirical survey. Nodes = value transformers (citizen cohorts, households, business, the commons, the three state functions, guardians, external actors). Flows carry value and anti-value elements. Magnitudes are placeholder (unit 'rel') pending quantification. Boundary flows use external_in/external_out.",
-    "version": "0.1",
-    "author": "Victor Bolshakov / Orkestron.AI",
-    "created_at": "2026-07-06T00:00:00Z",
-    "updated_at": "2026-07-06T00:00:00Z"
-  },
-  "nodes": [
-    { "id": "n_nat", "name": "Nature & subsoil", "position": { "x": 40, "y": 70 }, "size": { "width": 180, "height": 70 }, "description": "Natural resources, land, ecosystems — external source of rent and ecosystem services.", "bpmn_link": "", "link": "", "attributes": { "layer": "external" } },
-    { "id": "n_for", "name": "Foreign markets", "position": { "x": 40, "y": 190 }, "size": { "width": 180, "height": 70 }, "description": "Trade partners — imports (value in) and exports (value out).", "bpmn_link": "", "link": "", "attributes": { "layer": "external" } },
-    { "id": "n_pol", "name": "Other polities", "position": { "x": 40, "y": 310 }, "size": { "width": 180, "height": 70 }, "description": "Foreign states, alliances, international organizations — treaties, aid, recognition.", "bpmn_link": "", "link": "", "attributes": { "layer": "external" } },
-    { "id": "n_dia", "name": "Diaspora", "position": { "x": 40, "y": 430 }, "size": { "width": 180, "height": 70 }, "description": "Emigrants abroad — remittances, soft power, return skills.", "bpmn_link": "", "link": "", "attributes": { "layer": "external" } },
+    "schema":  {
+                   "id":  "axiacracy-state-v1",
+                   "title":  "Axiacracy - State Value System (full VSS)",
+                   "description":  "Comprehensive value-flow map of a value-flow-governed state, generated from the empirical survey: 11 citizen cohorts, households, 3 business types, the commons, 17 executive ministries, 3 guardians, legislative/judicial, municipalities, and other parties (NGOs/academia/religion/media/unions/finance/central bank), with the external boundary (resources/trade/polities/diaspora/FDI). Flows carry value and anti-value elements. Magnitudes are placeholder (unit \u0027rel\u0027) pending quantification. Node \u0027link\u0027 can point each ministry to its own sub-VSS.",
+                   "version":  "1.0",
+                   "author":  "Victor Bolshakov / Orkestron.AI",
+                   "created_at":  "2026-07-06T00:00:00Z",
+                   "updated_at":  "2026-07-06T00:00:00Z"
+               },
+    "nodes":  [
+                  {
+                      "id":  "n_nature",
+                      "name":  "Nature \u0026 subsoil",
+                      "position":  {
+                                       "x":  60,
+                                       "y":  70
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Nature \u0026 subsoil",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "ext"
+                                     }
+                  },
+                  {
+                      "id":  "n_foreign",
+                      "name":  "Foreign markets (trade)",
+                      "position":  {
+                                       "x":  60,
+                                       "y":  188
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Foreign markets (trade)",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "ext"
+                                     }
+                  },
+                  {
+                      "id":  "n_polities",
+                      "name":  "Other polities \u0026 intl. orgs",
+                      "position":  {
+                                       "x":  60,
+                                       "y":  306
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Other polities \u0026 intl. orgs",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "ext"
+                                     }
+                  },
+                  {
+                      "id":  "n_diaspora",
+                      "name":  "Diaspora",
+                      "position":  {
+                                       "x":  60,
+                                       "y":  424
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Diaspora",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "ext"
+                                     }
+                  },
+                  {
+                      "id":  "n_fdi",
+                      "name":  "Foreign investors / SWF",
+                      "position":  {
+                                       "x":  60,
+                                       "y":  542
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Foreign investors / SWF",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "ext"
+                                     }
+                  },
+                  {
+                      "id":  "n_land",
+                      "name":  "Land - compute - data (commons)",
+                      "position":  {
+                                       "x":  360,
+                                       "y":  90
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Land - compute - data (commons)",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "commons"
+                                     }
+                  },
+                  {
+                      "id":  "n_fund",
+                      "name":  "Commons Fund (fiscal hub)",
+                      "position":  {
+                                       "x":  360,
+                                       "y":  230
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Commons Fund (fiscal hub)",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "commons"
+                                     }
+                  },
+                  {
+                      "id":  "n_ngo",
+                      "name":  "NGOs / civil society",
+                      "position":  {
+                                       "x":  360,
+                                       "y":  380
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "NGOs / civil society",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "other"
+                                     }
+                  },
+                  {
+                      "id":  "n_academia",
+                      "name":  "Academia / universities",
+                      "position":  {
+                                       "x":  360,
+                                       "y":  476
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Academia / universities",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "other"
+                                     }
+                  },
+                  {
+                      "id":  "n_religion",
+                      "name":  "Religious organizations",
+                      "position":  {
+                                       "x":  360,
+                                       "y":  572
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Religious organizations",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "other"
+                                     }
+                  },
+                  {
+                      "id":  "n_media",
+                      "name":  "Media",
+                      "position":  {
+                                       "x":  360,
+                                       "y":  668
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Media",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "other"
+                                     }
+                  },
+                  {
+                      "id":  "n_unions",
+                      "name":  "Unions / professional bodies",
+                      "position":  {
+                                       "x":  360,
+                                       "y":  764
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Unions / professional bodies",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "other"
+                                     }
+                  },
+                  {
+                      "id":  "n_finmkt",
+                      "name":  "Financial markets / bondholders",
+                      "position":  {
+                                       "x":  360,
+                                       "y":  860
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Financial markets / bondholders",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "other"
+                                     }
+                  },
+                  {
+                      "id":  "n_cbank",
+                      "name":  "Central bank",
+                      "position":  {
+                                       "x":  360,
+                                       "y":  956
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Central bank",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "other"
+                                     }
+                  },
+                  {
+                      "id":  "n_c_infant",
+                      "name":  "Cohort: infant / young child",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  70
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Cohort: infant / young child",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_c_student",
+                      "name":  "Cohort: school child / student",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  174
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Cohort: school child / student",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_c_worker",
+                      "name":  "Cohort: working-age adult",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  278
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Cohort: working-age adult",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_c_parent",
+                      "name":  "Cohort: pregnant / new parent",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  382
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Cohort: pregnant / new parent",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_c_pension",
+                      "name":  "Cohort: pensioner / elderly",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  486
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Cohort: pensioner / elderly",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_c_disab",
+                      "name":  "Cohort: person with disability",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  590
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Cohort: person with disability",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_c_unemp",
+                      "name":  "Cohort: unemployed",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  694
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Cohort: unemployed",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_c_vet",
+                      "name":  "Cohort: veteran / servicemember",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  798
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Cohort: veteran / servicemember",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_c_poor",
+                      "name":  "Cohort: low-income / poor",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  902
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Cohort: low-income / poor",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_c_large",
+                      "name":  "Cohort: large family",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  1006
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Cohort: large family",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_c_other",
+                      "name":  "Cohort: other (rural/refugee/orphan/farmer)",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  1110
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Cohort: other (rural/refugee/orphan/farmer)",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_family",
+                      "name":  "Households / families",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  1214
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Households / families",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_biz_sme",
+                      "name":  "Business: SMEs / organizations",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  1318
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Business: SMEs / organizations",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_biz_big",
+                      "name":  "Business: BigTech / AI-infra",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  1422
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Business: BigTech / AI-infra",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_biz_farm",
+                      "name":  "Business: farmers / agri",
+                      "position":  {
+                                       "x":  740,
+                                       "y":  1526
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Business: farmers / agri",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "society"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_fiscal",
+                      "name":  "Min: Commons Fund \u0026 Fiscal",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  70
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Commons Fund \u0026 Fiscal",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_econ",
+                      "name":  "Min: Economic Balance",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  174
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Economic Balance",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_compute",
+                      "name":  "Min: Compute \u0026 Data Commons",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  278
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Compute \u0026 Data Commons",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_infra",
+                      "name":  "Min: Infrastructure",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  382
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Infrastructure",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_demo",
+                      "name":  "Min: Demography \u0026 Family",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  486
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Demography \u0026 Family",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_health",
+                      "name":  "Min: Health",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  590
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Health",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_cog",
+                      "name":  "Min: Cognitive Health",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  694
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Cognitive Health",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_edu",
+                      "name":  "Min: Education \u0026 Human Dev",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  798
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Education \u0026 Human Dev",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_sci",
+                      "name":  "Min: Science",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  902
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Science",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_epi",
+                      "name":  "Min: Epistemic Integrity",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  1006
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Epistemic Integrity",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_culture",
+                      "name":  "Min: Culture \u0026 Meaning",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  1110
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Culture \u0026 Meaning",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_social",
+                      "name":  "Min: Social Stability \u0026 Order",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  1214
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Social Stability \u0026 Order",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_eco",
+                      "name":  "Min: Ecology",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  1318
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Ecology",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_contrib",
+                      "name":  "Min: Contribution \u0026 Livelihood",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  1422
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Contribution \u0026 Livelihood",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_extrel",
+                      "name":  "Min: External Relations",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  1526
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: External Relations",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_defense",
+                      "name":  "Min: Defense",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  1630
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Defense",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_m_emerg",
+                      "name":  "Min: Emergency / Civil Protection",
+                      "position":  {
+                                       "x":  1140,
+                                       "y":  1734
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Min: Emergency / Civil Protection",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "exec"
+                                     }
+                  },
+                  {
+                      "id":  "n_leg",
+                      "name":  "Legislative (demos: weights/floors)",
+                      "position":  {
+                                       "x":  1560,
+                                       "y":  90
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Legislative (demos: weights/floors)",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "gov"
+                                     }
+                  },
+                  {
+                      "id":  "n_jud",
+                      "name":  "Judicial (rebalance harms)",
+                      "position":  {
+                                       "x":  1560,
+                                       "y":  240
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Judicial (rebalance harms)",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "gov"
+                                     }
+                  },
+                  {
+                      "id":  "n_g_equity",
+                      "name":  "Guardian: Equity / Ombudsman",
+                      "position":  {
+                                       "x":  1560,
+                                       "y":  390
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Guardian: Equity / Ombudsman",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "gov"
+                                     }
+                  },
+                  {
+                      "id":  "n_g_std",
+                      "name":  "Guardian: Standards \u0026 Measurement",
+                      "position":  {
+                                       "x":  1560,
+                                       "y":  540
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Guardian: Standards \u0026 Measurement",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "gov"
+                                     }
+                  },
+                  {
+                      "id":  "n_g_audit",
+                      "name":  "Guardian: Audit \u0026 Integrity",
+                      "position":  {
+                                       "x":  1560,
+                                       "y":  690
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Guardian: Audit \u0026 Integrity",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "gov"
+                                     }
+                  },
+                  {
+                      "id":  "n_muni",
+                      "name":  "Municipalities (territorial)",
+                      "position":  {
+                                       "x":  1560,
+                                       "y":  840
+                                   },
+                      "size":  {
+                                   "width":  210,
+                                   "height":  64
+                               },
+                      "description":  "Municipalities (territorial)",
+                      "bpmn_link":  "",
+                      "link":  "",
+                      "attributes":  {
+                                         "layer":  "gov"
+                                     }
+                  }
+              ],
+    "flows":  [
+                  {
+                      "id":  "f1",
+                      "name":  "Resource rent inflow",
+                      "type":  "external_in",
+                      "source_node_id":  "n_nature",
+                      "target_node_id":  "n_land",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e8b57",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e1"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f2",
+                      "name":  "Ecosystem services",
+                      "type":  "external_in",
+                      "source_node_id":  "n_nature",
+                      "target_node_id":  "n_m_eco",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e8b57",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e2"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f3",
+                      "name":  "Imports",
+                      "type":  "external_in",
+                      "source_node_id":  "n_foreign",
+                      "target_node_id":  "n_biz_sme",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e8b57",
+                      "show_label":  true,
+                      "element_type_ids":  [
 
-    { "id": "n_land", "name": "Land · compute · data (commons)", "position": { "x": 360, "y": 90 }, "size": { "width": 200, "height": 80 }, "description": "The commons: land/resources, spectrum, and AI-compute/data/network-effects (the new land) — source of unearned rent.", "bpmn_link": "", "link": "", "attributes": { "layer": "commons" } },
-    { "id": "n_fund", "name": "Commons Fund", "position": { "x": 360, "y": 300 }, "size": { "width": 200, "height": 90 }, "description": "Fiscal hub: unearned rent + externality/concentration charges pool here; flows out as dividend/floors and strategic financing.", "bpmn_link": "", "link": "", "attributes": { "layer": "commons" } },
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f4",
+                      "name":  "Exports",
+                      "type":  "external_out",
+                      "source_node_id":  "n_biz_sme",
+                      "target_node_id":  "n_foreign",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#b8860b",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e3"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f5",
+                      "name":  "Exports (tech)",
+                      "type":  "external_out",
+                      "source_node_id":  "n_biz_big",
+                      "target_node_id":  "n_foreign",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#b8860b",
+                      "show_label":  true,
+                      "element_type_ids":  [
 
-    { "id": "n_cit", "name": "Citizens (life-cycle cohorts)", "position": { "x": 720, "y": 90 }, "size": { "width": 200, "height": 90 }, "description": "Citizens across the life-cycle: child, student, worker, parent, unemployed/disabled, pensioner. Value transformers on all axes.", "bpmn_link": "", "link": "", "attributes": { "layer": "society", "cohorts": "child,student,worker,parent,unemployed,disabled,pensioner,veteran,low_income,large_family" } },
-    { "id": "n_fam", "name": "Households / families", "position": { "x": 720, "y": 300 }, "size": { "width": 180, "height": 70 }, "description": "Families as their own value systems: care, cohesion, demographic reproduction; sensed only at the boundary.", "bpmn_link": "", "link": "", "attributes": { "layer": "society" } },
-    { "id": "n_biz", "name": "Organizations · business · AI-infra", "position": { "x": 720, "y": 470 }, "size": { "width": 200, "height": 90 }, "description": "Firms and AI-infrastructure owners: produce economic value + externalities; market-cleared, externality-priced by the state.", "bpmn_link": "", "link": "", "attributes": { "layer": "society" } },
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f6",
+                      "name":  "Aid - treaties - recognition",
+                      "type":  "external_in",
+                      "source_node_id":  "n_polities",
+                      "target_node_id":  "n_m_extrel",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e8b57",
+                      "show_label":  true,
+                      "element_type_ids":  [
 
-    { "id": "n_leg", "name": "Legislative — priorities", "position": { "x": 1080, "y": 60 }, "size": { "width": 190, "height": 70 }, "description": "The demos: sets value weights w(t) and floors (directly + via parties).", "bpmn_link": "", "link": "", "attributes": { "layer": "state" } },
-    { "id": "n_exe", "name": "Executive — deliver / balance", "position": { "x": 1080, "y": 220 }, "size": { "width": 200, "height": 90 }, "description": "Ministries (Sub-Agents), one per flow-domain: sense to finance to deliver/balance. Expand each via node link to its own VSS.", "bpmn_link": "", "link": "", "attributes": { "layer": "state" } },
-    { "id": "n_jud", "name": "Judicial — rebalance harms", "position": { "x": 1080, "y": 400 }, "size": { "width": 190, "height": 70 }, "description": "Measures harmful events, restores across axes, deters proportionally.", "bpmn_link": "", "link": "", "attributes": { "layer": "state" } },
-    { "id": "n_grd", "name": "Guardians — Equity·Standards·Audit", "position": { "x": 1080, "y": 540 }, "size": { "width": 200, "height": 70 }, "description": "Equity/Ombudsman, Standards & Measurement Authority (accounting rules), Audit & Integrity.", "bpmn_link": "", "link": "", "attributes": { "layer": "state" } }
-  ],
-  "flows": [
-    { "id": "f1", "name": "Resource rent inflow", "type": "external_in", "source_node_id": "n_nat", "target_node_id": "n_land", "value": 3, "unit": "rel", "color": "#2e8b57", "show_label": true, "element_type_ids": ["e1"], "attributes": {} },
-    { "id": "f2", "name": "Imports (value in)", "type": "external_in", "source_node_id": "n_for", "target_node_id": "n_biz", "value": 2, "unit": "rel", "color": "#2e8b57", "show_label": true, "element_type_ids": [], "attributes": {} },
-    { "id": "f3", "name": "Exports (value out)", "type": "external_out", "source_node_id": "n_biz", "target_node_id": "n_for", "value": 2, "unit": "rel", "color": "#b8860b", "show_label": true, "element_type_ids": [], "attributes": {} },
-    { "id": "f4", "name": "Aid · treaties · recognition (in)", "type": "external_in", "source_node_id": "n_pol", "target_node_id": "n_exe", "value": 1, "unit": "rel", "color": "#2e8b57", "show_label": true, "element_type_ids": [], "attributes": {} },
-    { "id": "f5", "name": "Contributions · recognition (out)", "type": "external_out", "source_node_id": "n_exe", "target_node_id": "n_pol", "value": 1, "unit": "rel", "color": "#b8860b", "show_label": false, "element_type_ids": [], "attributes": {} },
-    { "id": "f6", "name": "Diaspora remittances", "type": "external_in", "source_node_id": "n_dia", "target_node_id": "n_cit", "value": 1, "unit": "rel", "color": "#2e8b57", "show_label": true, "element_type_ids": [], "attributes": {} },
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f7",
+                      "name":  "Contributions - alliance",
+                      "type":  "external_out",
+                      "source_node_id":  "n_m_extrel",
+                      "target_node_id":  "n_polities",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#b8860b",
+                      "show_label":  true,
+                      "element_type_ids":  [
 
-    { "id": "f7", "name": "Commons rent (land/compute/data)", "type": "internal", "source_node_id": "n_land", "target_node_id": "n_fund", "value": 3, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e2"], "attributes": {} },
-    { "id": "f8", "name": "Externality & concentration charges", "type": "internal", "source_node_id": "n_biz", "target_node_id": "n_fund", "value": 2, "unit": "rel", "color": "#c0392b", "show_label": true, "element_type_ids": ["e3", "e4"], "attributes": { "note": "carries anti-value priced back to source" } },
-    { "id": "f9", "name": "Dividend / material floors", "type": "internal", "source_node_id": "n_fund", "target_node_id": "n_cit", "value": 3, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e5", "e6"], "attributes": {} },
-    { "id": "f10", "name": "Public financing", "type": "internal", "source_node_id": "n_fund", "target_node_id": "n_exe", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": [], "attributes": {} },
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f8",
+                      "name":  "Collective defense",
+                      "type":  "external_in",
+                      "source_node_id":  "n_polities",
+                      "target_node_id":  "n_m_defense",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e8b57",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e4"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f9",
+                      "name":  "Remittances",
+                      "type":  "external_in",
+                      "source_node_id":  "n_diaspora",
+                      "target_node_id":  "n_c_worker",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e8b57",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e5"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f10",
+                      "name":  "FDI capital",
+                      "type":  "external_in",
+                      "source_node_id":  "n_fdi",
+                      "target_node_id":  "n_biz_big",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e8b57",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e6"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f11",
+                      "name":  "Sovereign bond purchases",
+                      "type":  "external_in",
+                      "source_node_id":  "n_fdi",
+                      "target_node_id":  "n_m_fiscal",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e8b57",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e7"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f12",
+                      "name":  "Unearned rent (land/compute/data)",
+                      "type":  "internal",
+                      "source_node_id":  "n_land",
+                      "target_node_id":  "n_fund",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e8"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f13",
+                      "name":  "Rent + concentration charges",
+                      "type":  "internal",
+                      "source_node_id":  "n_biz_big",
+                      "target_node_id":  "n_fund",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#c0392b",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e9",
+                                               "e10"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f14",
+                      "name":  "Externality charges",
+                      "type":  "internal",
+                      "source_node_id":  "n_biz_sme",
+                      "target_node_id":  "n_fund",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
 
-    { "id": "f11", "name": "Contribution / labour", "type": "internal", "source_node_id": "n_cit", "target_node_id": "n_biz", "value": 3, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e7"], "attributes": {} },
-    { "id": "f12", "name": "Goods & services (market)", "type": "internal", "source_node_id": "n_biz", "target_node_id": "n_cit", "value": 3, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e8", "e9"], "attributes": {} },
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f15",
+                      "name":  "Ecological externality",
+                      "type":  "internal",
+                      "source_node_id":  "n_biz_big",
+                      "target_node_id":  "n_m_eco",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#c0392b",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e11"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f16",
+                      "name":  "Attention externality",
+                      "type":  "internal",
+                      "source_node_id":  "n_biz_big",
+                      "target_node_id":  "n_m_cog",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#c0392b",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e12"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f17",
+                      "name":  "Commons Fund to Treasury",
+                      "type":  "internal",
+                      "source_node_id":  "n_fund",
+                      "target_node_id":  "n_m_fiscal",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
 
-    { "id": "f13", "name": "Care · household value", "type": "internal", "source_node_id": "n_cit", "target_node_id": "n_fam", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": false, "element_type_ids": [], "attributes": {} },
-    { "id": "f14", "name": "Demographic value (children)", "type": "internal", "source_node_id": "n_fam", "target_node_id": "n_exe", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e10"], "attributes": {} },
-    { "id": "f15", "name": "Recognition · generosity", "type": "internal", "source_node_id": "n_cit", "target_node_id": "n_cit", "value": 1, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": [], "attributes": { "note": "peer-to-peer self-loop" } },
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f18",
+                      "name":  "Dividend financing",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_fiscal",
+                      "target_node_id":  "n_m_contrib",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
 
-    { "id": "f16", "name": "Votes · needs · attestation", "type": "internal", "source_node_id": "n_cit", "target_node_id": "n_leg", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e11"], "attributes": {} },
-    { "id": "f17", "name": "Non-tax civic value (service · data · compliance · trust)", "type": "internal", "source_node_id": "n_cit", "target_node_id": "n_exe", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e12", "e13"], "attributes": {} },
-    { "id": "f18", "name": "Value delivered (health · education · pension · safety)", "type": "internal", "source_node_id": "n_exe", "target_node_id": "n_cit", "value": 3, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e14"], "attributes": {} },
-    { "id": "f19", "name": "Restoration + protection", "type": "internal", "source_node_id": "n_jud", "target_node_id": "n_cit", "value": 1, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e15"], "attributes": {} },
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f19",
+                      "name":  "Financing",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_fiscal",
+                      "target_node_id":  "n_m_health",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
 
-    { "id": "f20", "name": "Weights / floors (priorities)", "type": "internal", "source_node_id": "n_leg", "target_node_id": "n_exe", "value": 1, "unit": "rel", "color": "#7c4dff", "show_label": true, "element_type_ids": [], "attributes": { "note": "control signal, not a value transfer" } },
-    { "id": "f21", "name": "Accounting rules · confidence · equity", "type": "internal", "source_node_id": "n_grd", "target_node_id": "n_exe", "value": 1, "unit": "rel", "color": "#7c4dff", "show_label": true, "element_type_ids": [], "attributes": { "note": "governs the measurement layer" } },
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f20",
+                      "name":  "Financing",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_fiscal",
+                      "target_node_id":  "n_m_edu",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
 
-    { "id": "f22", "name": "Non-tax business value (jobs · data · innovation · mobilization)", "type": "internal", "source_node_id": "n_biz", "target_node_id": "n_exe", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": ["e16"], "attributes": {} },
-    { "id": "f23", "name": "Financing · incentives · legal order · infrastructure", "type": "internal", "source_node_id": "n_exe", "target_node_id": "n_biz", "value": 2, "unit": "rel", "color": "#2e6da4", "show_label": true, "element_type_ids": [], "attributes": {} }
-  ],
-  "elements": [
-    { "id": "e1", "name": "Resource rent", "kind": "value", "sign": 1, "quantity": 3, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f1", "attributes": { "axis": "economic" } },
-    { "id": "e2", "name": "Unearned rent (land/compute/data)", "kind": "value", "sign": 1, "quantity": 3, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f7", "attributes": { "axis": "economic", "note": "commons-owed" } },
-    { "id": "e3", "name": "Ecological harm", "kind": "anti_value", "sign": -1, "quantity": 1, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f8", "attributes": { "axis": "ecological" } },
-    { "id": "e4", "name": "Value concentration", "kind": "anti_value", "sign": -1, "quantity": 1, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f8", "attributes": { "axis": "economic" } },
-    { "id": "e5", "name": "Dividend / economic floor", "kind": "value", "sign": 1, "quantity": 2, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f9", "attributes": { "axis": "economic" } },
-    { "id": "e6", "name": "Health & education access", "kind": "value", "sign": 1, "quantity": 2, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f9", "attributes": { "axis": "cognitive,demographic" } },
-    { "id": "e7", "name": "Labour & human capital", "kind": "value", "sign": 1, "quantity": 3, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f11", "attributes": { "axis": "economic" } },
-    { "id": "e8", "name": "Goods & services", "kind": "value", "sign": 1, "quantity": 3, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f12", "attributes": { "axis": "economic" } },
-    { "id": "e9", "name": "Cognitive dependency", "kind": "anti_value", "sign": -1, "quantity": 1, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f12", "attributes": { "axis": "cognitive", "note": "on attention-capturing goods" } },
-    { "id": "e10", "name": "Demographic value (children)", "kind": "value", "sign": 1, "quantity": 2, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f14", "attributes": { "axis": "demographic" } },
-    { "id": "e11", "name": "Legitimacy & consent", "kind": "value", "sign": 1, "quantity": 2, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f16", "attributes": { "axis": "social_stability" } },
-    { "id": "e12", "name": "Personal data", "kind": "value", "sign": 1, "quantity": 1, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f17", "attributes": { "axis": "epistemic" } },
-    { "id": "e13", "name": "Civic / military service", "kind": "value", "sign": 1, "quantity": 1, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f17", "attributes": { "axis": "social_stability,infrastructural" } },
-    { "id": "e14", "name": "Delivered services (health/edu/pension)", "kind": "value", "sign": 1, "quantity": 3, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f18", "attributes": { "axis": "cognitive,demographic,economic" } },
-    { "id": "e15", "name": "Restoration & social stability", "kind": "value", "sign": 1, "quantity": 1, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f19", "attributes": { "axis": "social_stability,meaning" } },
-    { "id": "e16", "name": "Jobs · innovation · mobilization", "kind": "value", "sign": 1, "quantity": 2, "unit": "rel", "location": "in_flow", "node_id": null, "flow_id": "f22", "attributes": { "axis": "economic,infrastructural" } }
-  ],
-  "texts": [
-    { "id": "t1", "x": 40, "y": 36, "text": "EXTERNAL BOUNDARY" },
-    { "id": "t2", "x": 360, "y": 36, "text": "THE COMMONS" },
-    { "id": "t3", "x": 720, "y": 36, "text": "SOCIETY" },
-    { "id": "t4", "x": 1080, "y": 36, "text": "STATE — value-flow functions" },
-    { "id": "t5", "x": 360, "y": 640, "text": "Solid blue = internal value flow · red = anti-value priced back · gold = external outflow · green = external inflow · purple = control signal (weights/rules)" }
-  ]
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f21",
+                      "name":  "Financing",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_fiscal",
+                      "target_node_id":  "n_m_infra",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f22",
+                      "name":  "Standby financing",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_fiscal",
+                      "target_node_id":  "n_m_emerg",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f23",
+                      "name":  "Fiscal transfers (equity)",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_fiscal",
+                      "target_node_id":  "n_muni",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f24",
+                      "name":  "Child allowance - daycare",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_demo",
+                      "target_node_id":  "n_c_infant",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e13"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f25",
+                      "name":  "Pediatric care - vaccination",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_health",
+                      "target_node_id":  "n_c_infant",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e14"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f26",
+                      "name":  "Early education",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_edu",
+                      "target_node_id":  "n_c_infant",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e15"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f27",
+                      "name":  "Schooling - student aid",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_edu",
+                      "target_node_id":  "n_c_student",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e16"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f28",
+                      "name":  "Cognitive development",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_cog",
+                      "target_node_id":  "n_c_student",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e17"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f29",
+                      "name":  "Cultural access",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_culture",
+                      "target_node_id":  "n_c_student",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e18"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f30",
+                      "name":  "Healthcare",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_health",
+                      "target_node_id":  "n_c_worker",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e19"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f31",
+                      "name":  "Tax credits - mortgage support",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_econ",
+                      "target_node_id":  "n_c_worker",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e20"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f32",
+                      "name":  "Transit - infrastructure",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_infra",
+                      "target_node_id":  "n_c_worker",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e21"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f33",
+                      "name":  "Job placement - retraining",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_contrib",
+                      "target_node_id":  "n_c_worker",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e22"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f34",
+                      "name":  "Parental leave - maternity",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_demo",
+                      "target_node_id":  "n_c_parent",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e23"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f35",
+                      "name":  "Antenatal - delivery care",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_health",
+                      "target_node_id":  "n_c_parent",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e24"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f36",
+                      "name":  "Pension - dividend",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_contrib",
+                      "target_node_id":  "n_c_pension",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e25"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f37",
+                      "name":  "Elderly \u0026 long-term care",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_health",
+                      "target_node_id":  "n_c_pension",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e26"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f38",
+                      "name":  "Discounts - standing",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_social",
+                      "target_node_id":  "n_c_pension",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e27"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f39",
+                      "name":  "Care + devices",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_health",
+                      "target_node_id":  "n_c_disab",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e28"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f40",
+                      "name":  "Disability pension - work",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_contrib",
+                      "target_node_id":  "n_c_disab",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e29"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f41",
+                      "name":  "Accessibility - anti-discrimination",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_social",
+                      "target_node_id":  "n_c_disab",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e30"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f42",
+                      "name":  "Unemployment benefit - retraining",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_contrib",
+                      "target_node_id":  "n_c_unemp",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e31"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f43",
+                      "name":  "Startup subsidy",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_econ",
+                      "target_node_id":  "n_c_unemp",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e32"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f44",
+                      "name":  "Veteran benefits - health - housing",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_defense",
+                      "target_node_id":  "n_c_vet",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e33"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f45",
+                      "name":  "Cash assistance - social contract",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_contrib",
+                      "target_node_id":  "n_c_poor",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e34"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f46",
+                      "name":  "Basic healthcare",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_health",
+                      "target_node_id":  "n_c_poor",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e35"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f47",
+                      "name":  "Housing - energy assistance",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_infra",
+                      "target_node_id":  "n_c_poor",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e36"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f48",
+                      "name":  "Large-family benefits",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_demo",
+                      "target_node_id":  "n_c_large",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e37"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f49",
+                      "name":  "Targeted programs",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_contrib",
+                      "target_node_id":  "n_c_other",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e38"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f50",
+                      "name":  "Local services",
+                      "type":  "internal",
+                      "source_node_id":  "n_muni",
+                      "target_node_id":  "n_c_worker",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e39"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f51",
+                      "name":  "Disputes / appeals",
+                      "type":  "internal",
+                      "source_node_id":  "n_c_worker",
+                      "target_node_id":  "n_jud",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f52",
+                      "name":  "Commercial disputes",
+                      "type":  "internal",
+                      "source_node_id":  "n_biz_sme",
+                      "target_node_id":  "n_jud",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f53",
+                      "name":  "Restoration - rights protection",
+                      "type":  "internal",
+                      "source_node_id":  "n_jud",
+                      "target_node_id":  "n_c_worker",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e40"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f54",
+                      "name":  "Rebalancing - clawback",
+                      "type":  "internal",
+                      "source_node_id":  "n_jud",
+                      "target_node_id":  "n_biz_big",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#c0392b",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e41"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f55",
+                      "name":  "Votes - legitimacy",
+                      "type":  "internal",
+                      "source_node_id":  "n_c_worker",
+                      "target_node_id":  "n_leg",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e42"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f56",
+                      "name":  "Votes",
+                      "type":  "internal",
+                      "source_node_id":  "n_c_pension",
+                      "target_node_id":  "n_leg",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e43"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f57",
+                      "name":  "Votes",
+                      "type":  "internal",
+                      "source_node_id":  "n_c_student",
+                      "target_node_id":  "n_leg",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e44"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f58",
+                      "name":  "Conscription / service",
+                      "type":  "internal",
+                      "source_node_id":  "n_c_worker",
+                      "target_node_id":  "n_m_defense",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e45"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f59",
+                      "name":  "Taxes - data - compliance",
+                      "type":  "internal",
+                      "source_node_id":  "n_c_worker",
+                      "target_node_id":  "n_m_fiscal",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e46",
+                                               "e47"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f60",
+                      "name":  "Volunteering - trust",
+                      "type":  "internal",
+                      "source_node_id":  "n_c_worker",
+                      "target_node_id":  "n_m_social",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e48"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f61",
+                      "name":  "Labour - human capital",
+                      "type":  "internal",
+                      "source_node_id":  "n_c_worker",
+                      "target_node_id":  "n_biz_sme",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e49"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f62",
+                      "name":  "Care - household",
+                      "type":  "internal",
+                      "source_node_id":  "n_c_worker",
+                      "target_node_id":  "n_family",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f63",
+                      "name":  "Demographic reproduction",
+                      "type":  "internal",
+                      "source_node_id":  "n_family",
+                      "target_node_id":  "n_m_demo",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e50"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f64",
+                      "name":  "Recognition - generosity",
+                      "type":  "internal",
+                      "source_node_id":  "n_c_worker",
+                      "target_node_id":  "n_c_worker",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e51"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f65",
+                      "name":  "Local attestation - votes",
+                      "type":  "internal",
+                      "source_node_id":  "n_c_worker",
+                      "target_node_id":  "n_muni",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e52"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f66",
+                      "name":  "Taxes - reporting - employment",
+                      "type":  "internal",
+                      "source_node_id":  "n_biz_sme",
+                      "target_node_id":  "n_m_fiscal",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e53",
+                                               "e54"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f67",
+                      "name":  "Taxes",
+                      "type":  "internal",
+                      "source_node_id":  "n_biz_big",
+                      "target_node_id":  "n_m_fiscal",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e55"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f68",
+                      "name":  "Innovation - jobs",
+                      "type":  "internal",
+                      "source_node_id":  "n_biz_sme",
+                      "target_node_id":  "n_m_econ",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e56"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f69",
+                      "name":  "Loans - grants - procurement - legal order",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_econ",
+                      "target_node_id":  "n_biz_sme",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e57"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f70",
+                      "name":  "R\u0026D - procurement",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_econ",
+                      "target_node_id":  "n_biz_big",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e58"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f71",
+                      "name":  "Infrastructure - data",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_infra",
+                      "target_node_id":  "n_biz_sme",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e59"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f72",
+                      "name":  "Data - compute capability",
+                      "type":  "internal",
+                      "source_node_id":  "n_biz_big",
+                      "target_node_id":  "n_m_compute",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e60"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f73",
+                      "name":  "Compute-commons access",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_compute",
+                      "target_node_id":  "n_biz_big",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e61"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f74",
+                      "name":  "Ag subsidies",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_eco",
+                      "target_node_id":  "n_biz_farm",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e62"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f75",
+                      "name":  "Food - taxes",
+                      "type":  "internal",
+                      "source_node_id":  "n_biz_farm",
+                      "target_node_id":  "n_m_fiscal",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e63"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f76",
+                      "name":  "Defense-industrial capacity",
+                      "type":  "internal",
+                      "source_node_id":  "n_biz_sme",
+                      "target_node_id":  "n_m_defense",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e64"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f77",
+                      "name":  "Service delivery - watchdog",
+                      "type":  "internal",
+                      "source_node_id":  "n_ngo",
+                      "target_node_id":  "n_m_social",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e65"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f78",
+                      "name":  "Grants - recognition",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_social",
+                      "target_node_id":  "n_ngo",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e66"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f79",
+                      "name":  "Knowledge - graduates",
+                      "type":  "internal",
+                      "source_node_id":  "n_academia",
+                      "target_node_id":  "n_m_sci",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e67"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f80",
+                      "name":  "Research funding",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_sci",
+                      "target_node_id":  "n_academia",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e68"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f81",
+                      "name":  "Social services - cohesion",
+                      "type":  "internal",
+                      "source_node_id":  "n_religion",
+                      "target_node_id":  "n_m_social",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e69"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f82",
+                      "name":  "Recognition - exemptions",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_social",
+                      "target_node_id":  "n_religion",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f83",
+                      "name":  "Information - accountability",
+                      "type":  "internal",
+                      "source_node_id":  "n_media",
+                      "target_node_id":  "n_m_epi",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e70"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f84",
+                      "name":  "Access - standards",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_epi",
+                      "target_node_id":  "n_media",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f85",
+                      "name":  "Labour peace - input",
+                      "type":  "internal",
+                      "source_node_id":  "n_unions",
+                      "target_node_id":  "n_m_econ",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e71"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f86",
+                      "name":  "Sovereign borrowing - liquidity",
+                      "type":  "internal",
+                      "source_node_id":  "n_finmkt",
+                      "target_node_id":  "n_m_fiscal",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e72"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f87",
+                      "name":  "Repayment - credibility",
+                      "type":  "internal",
+                      "source_node_id":  "n_m_fiscal",
+                      "target_node_id":  "n_finmkt",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e73"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f88",
+                      "name":  "Monetary stability - seigniorage",
+                      "type":  "internal",
+                      "source_node_id":  "n_cbank",
+                      "target_node_id":  "n_m_fiscal",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#2e6da4",
+                      "show_label":  true,
+                      "element_type_ids":  [
+                                               "e74"
+                                           ],
+                      "attributes":  {
+                                         "control":  false
+                                     }
+                  },
+                  {
+                      "id":  "f89",
+                      "name":  "Weights - floors",
+                      "type":  "internal",
+                      "source_node_id":  "n_leg",
+                      "target_node_id":  "n_m_fiscal",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#7c4dff",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  true
+                                     }
+                  },
+                  {
+                      "id":  "f90",
+                      "name":  "Weights - floors",
+                      "type":  "internal",
+                      "source_node_id":  "n_leg",
+                      "target_node_id":  "n_m_health",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#7c4dff",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  true
+                                     }
+                  },
+                  {
+                      "id":  "f91",
+                      "name":  "Weights - floors",
+                      "type":  "internal",
+                      "source_node_id":  "n_leg",
+                      "target_node_id":  "n_m_eco",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#7c4dff",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  true
+                                     }
+                  },
+                  {
+                      "id":  "f92",
+                      "name":  "Weights - floors",
+                      "type":  "internal",
+                      "source_node_id":  "n_leg",
+                      "target_node_id":  "n_m_cog",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#7c4dff",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  true
+                                     }
+                  },
+                  {
+                      "id":  "f93",
+                      "name":  "Accounting rules - confidence",
+                      "type":  "internal",
+                      "source_node_id":  "n_g_std",
+                      "target_node_id":  "n_m_fiscal",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#7c4dff",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  true
+                                     }
+                  },
+                  {
+                      "id":  "f94",
+                      "name":  "Accounting rules",
+                      "type":  "internal",
+                      "source_node_id":  "n_g_std",
+                      "target_node_id":  "n_m_econ",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#7c4dff",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  true
+                                     }
+                  },
+                  {
+                      "id":  "f95",
+                      "name":  "Floor enforcement",
+                      "type":  "internal",
+                      "source_node_id":  "n_g_equity",
+                      "target_node_id":  "n_m_contrib",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#7c4dff",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  true
+                                     }
+                  },
+                  {
+                      "id":  "f96",
+                      "name":  "Equity oversight",
+                      "type":  "internal",
+                      "source_node_id":  "n_g_equity",
+                      "target_node_id":  "n_muni",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#7c4dff",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  true
+                                     }
+                  },
+                  {
+                      "id":  "f97",
+                      "name":  "Measurement audit",
+                      "type":  "internal",
+                      "source_node_id":  "n_g_audit",
+                      "target_node_id":  "n_m_compute",
+                      "value":  1,
+                      "unit":  "rel",
+                      "color":  "#7c4dff",
+                      "show_label":  true,
+                      "element_type_ids":  [
+
+                                           ],
+                      "attributes":  {
+                                         "control":  true
+                                     }
+                  }
+              ],
+    "elements":  [
+                     {
+                         "id":  "e1",
+                         "name":  "Resource rent",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f1",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e2",
+                         "name":  "Ecosystem services",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f2",
+                         "attributes":  {
+                                            "axis":  "ecological"
+                                        }
+                     },
+                     {
+                         "id":  "e3",
+                         "name":  "FX earnings",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f4",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e4",
+                         "name":  "Security",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f8",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e5",
+                         "name":  "Remittances",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f9",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e6",
+                         "name":  "Capital",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f10",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e7",
+                         "name":  "Financing",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f11",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e8",
+                         "name":  "Rent",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f12",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e9",
+                         "name":  "Data rent",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f13",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e10",
+                         "name":  "Concentration",
+                         "kind":  "anti_value",
+                         "sign":  -1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f13",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e11",
+                         "name":  "Ecological harm",
+                         "kind":  "anti_value",
+                         "sign":  -1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f15",
+                         "attributes":  {
+                                            "axis":  "ecological"
+                                        }
+                     },
+                     {
+                         "id":  "e12",
+                         "name":  "Cognitive dependency",
+                         "kind":  "anti_value",
+                         "sign":  -1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f16",
+                         "attributes":  {
+                                            "axis":  "cognitive"
+                                        }
+                     },
+                     {
+                         "id":  "e13",
+                         "name":  "Demographic support",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f24",
+                         "attributes":  {
+                                            "axis":  "demographic"
+                                        }
+                     },
+                     {
+                         "id":  "e14",
+                         "name":  "Health",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f25",
+                         "attributes":  {
+                                            "axis":  "demographic"
+                                        }
+                     },
+                     {
+                         "id":  "e15",
+                         "name":  "Educational",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f26",
+                         "attributes":  {
+                                            "axis":  "educational"
+                                        }
+                     },
+                     {
+                         "id":  "e16",
+                         "name":  "Educational",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f27",
+                         "attributes":  {
+                                            "axis":  "educational"
+                                        }
+                     },
+                     {
+                         "id":  "e17",
+                         "name":  "Cognitive",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f28",
+                         "attributes":  {
+                                            "axis":  "cognitive"
+                                        }
+                     },
+                     {
+                         "id":  "e18",
+                         "name":  "Meaning",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f29",
+                         "attributes":  {
+                                            "axis":  "meaning"
+                                        }
+                     },
+                     {
+                         "id":  "e19",
+                         "name":  "Health",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f30",
+                         "attributes":  {
+                                            "axis":  "cognitive"
+                                        }
+                     },
+                     {
+                         "id":  "e20",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f31",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e21",
+                         "name":  "Infrastructural",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f32",
+                         "attributes":  {
+                                            "axis":  "infrastructural"
+                                        }
+                     },
+                     {
+                         "id":  "e22",
+                         "name":  "Educational",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f33",
+                         "attributes":  {
+                                            "axis":  "educational"
+                                        }
+                     },
+                     {
+                         "id":  "e23",
+                         "name":  "Demographic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f34",
+                         "attributes":  {
+                                            "axis":  "demographic"
+                                        }
+                     },
+                     {
+                         "id":  "e24",
+                         "name":  "Health",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f35",
+                         "attributes":  {
+                                            "axis":  "demographic"
+                                        }
+                     },
+                     {
+                         "id":  "e25",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f36",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e26",
+                         "name":  "Health",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f37",
+                         "attributes":  {
+                                            "axis":  "demographic"
+                                        }
+                     },
+                     {
+                         "id":  "e27",
+                         "name":  "Social stability",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f38",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e28",
+                         "name":  "Health",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f39",
+                         "attributes":  {
+                                            "axis":  "cognitive"
+                                        }
+                     },
+                     {
+                         "id":  "e29",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f40",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e30",
+                         "name":  "Social stability",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f41",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e31",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f42",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e32",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f43",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e33",
+                         "name":  "Health",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f44",
+                         "attributes":  {
+                                            "axis":  "cognitive"
+                                        }
+                     },
+                     {
+                         "id":  "e34",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f45",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e35",
+                         "name":  "Health",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f46",
+                         "attributes":  {
+                                            "axis":  "cognitive"
+                                        }
+                     },
+                     {
+                         "id":  "e36",
+                         "name":  "Infrastructural",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f47",
+                         "attributes":  {
+                                            "axis":  "infrastructural"
+                                        }
+                     },
+                     {
+                         "id":  "e37",
+                         "name":  "Demographic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f48",
+                         "attributes":  {
+                                            "axis":  "demographic"
+                                        }
+                     },
+                     {
+                         "id":  "e38",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f49",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e39",
+                         "name":  "Infrastructural",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f50",
+                         "attributes":  {
+                                            "axis":  "infrastructural"
+                                        }
+                     },
+                     {
+                         "id":  "e40",
+                         "name":  "Social stability",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f53",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e41",
+                         "name":  "Concentration",
+                         "kind":  "anti_value",
+                         "sign":  -1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f54",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e42",
+                         "name":  "Legitimacy",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f55",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e43",
+                         "name":  "Legitimacy",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f56",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e44",
+                         "name":  "Legitimacy",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f57",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e45",
+                         "name":  "Security",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f58",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e46",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f59",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e47",
+                         "name":  "Data",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f59",
+                         "attributes":  {
+                                            "axis":  "epistemic"
+                                        }
+                     },
+                     {
+                         "id":  "e48",
+                         "name":  "Social stability",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f60",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e49",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f61",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e50",
+                         "name":  "Demographic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f63",
+                         "attributes":  {
+                                            "axis":  "demographic"
+                                        }
+                     },
+                     {
+                         "id":  "e51",
+                         "name":  "Meaning",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f64",
+                         "attributes":  {
+                                            "axis":  "meaning"
+                                        }
+                     },
+                     {
+                         "id":  "e52",
+                         "name":  "Legitimacy",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f65",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e53",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f66",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e54",
+                         "name":  "Data",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f66",
+                         "attributes":  {
+                                            "axis":  "epistemic"
+                                        }
+                     },
+                     {
+                         "id":  "e55",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f67",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e56",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f68",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e57",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f69",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e58",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f70",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e59",
+                         "name":  "Infrastructural",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f71",
+                         "attributes":  {
+                                            "axis":  "infrastructural"
+                                        }
+                     },
+                     {
+                         "id":  "e60",
+                         "name":  "Data",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f72",
+                         "attributes":  {
+                                            "axis":  "epistemic"
+                                        }
+                     },
+                     {
+                         "id":  "e61",
+                         "name":  "Infrastructural",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f73",
+                         "attributes":  {
+                                            "axis":  "infrastructural"
+                                        }
+                     },
+                     {
+                         "id":  "e62",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f74",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e63",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f75",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e64",
+                         "name":  "Security",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f76",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e65",
+                         "name":  "Social stability",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f77",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e66",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f78",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e67",
+                         "name":  "Scientific",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f79",
+                         "attributes":  {
+                                            "axis":  "scientific"
+                                        }
+                     },
+                     {
+                         "id":  "e68",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f80",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e69",
+                         "name":  "Social stability",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f81",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e70",
+                         "name":  "Epistemic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f83",
+                         "attributes":  {
+                                            "axis":  "epistemic"
+                                        }
+                     },
+                     {
+                         "id":  "e71",
+                         "name":  "Social stability",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f85",
+                         "attributes":  {
+                                            "axis":  "social_stability"
+                                        }
+                     },
+                     {
+                         "id":  "e72",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f86",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e73",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f87",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     },
+                     {
+                         "id":  "e74",
+                         "name":  "Economic",
+                         "kind":  "value",
+                         "sign":  1,
+                         "quantity":  1,
+                         "unit":  "rel",
+                         "location":  "in_flow",
+                         "node_id":  null,
+                         "flow_id":  "f88",
+                         "attributes":  {
+                                            "axis":  "economic"
+                                        }
+                     }
+                 ],
+    "texts":  [
+                  {
+                      "id":  "t1",
+                      "x":  60,
+                      "y":  36,
+                      "text":  "EXTERNAL BOUNDARY"
+                  },
+                  {
+                      "id":  "t2",
+                      "x":  360,
+                      "y":  36,
+                      "text":  "COMMONS + OTHER PARTIES"
+                  },
+                  {
+                      "id":  "t3",
+                      "x":  740,
+                      "y":  36,
+                      "text":  "SOCIETY (cohorts - households - business)"
+                  },
+                  {
+                      "id":  "t4",
+                      "x":  1140,
+                      "y":  36,
+                      "text":  "STATE EXECUTIVE (ministries)"
+                  },
+                  {
+                      "id":  "t5",
+                      "x":  1560,
+                      "y":  36,
+                      "text":  "LEGISLATIVE - JUDICIAL - GUARDIANS - MUNICIPAL"
+                  },
+                  {
+                      "id":  "t6",
+                      "x":  360,
+                      "y":  1240,
+                      "text":  "blue=internal value - red=anti-value - green=external in - gold=external out - purple=control (weights/rules)"
+                  }
+              ]
 }
