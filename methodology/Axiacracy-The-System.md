@@ -563,6 +563,11 @@ unearned, protect the mind, and keep to the three duties. Its distinctive claim 
 none of them occupied: *a way to see and rebalance value beyond money without becoming the value-directing
 statesman.*
 
+> **Axiacracy's precise relation to each thinker and school — what it adopts, adapts, and where it
+> consciously diverges, with citations — is kept in a companion register:**
+> [`Axiacracy-Positions-and-Lineage.md`](./Axiacracy-Positions-and-Lineage.md). A reader who wants
+> "Axiacracy vs capitalism / socialism / Smith / Marx / Rawls…" should start there.
+
 ## 24. Implementation and the test bench
 
 Axiacracy the *doctrine* is deployment-agnostic; it fixes only the invariants above. **MOS** — the
