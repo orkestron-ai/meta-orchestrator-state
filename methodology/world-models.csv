@@ -68,10 +68,10 @@ S4,Security Ownership & Access,Access Audit,Append-only log of every read and gr
 S5,Security Ownership & Access,Privacy Aggregation & Cohort Floor,State sensing at cohort grain with k-anonymity,"cohort; aggregate; k_floor; suppression_rule",Statistics steward under Charter limits,differential privacy practice,draft
 S6,Security Ownership & Access,Verification & ZK Attestation,Prove predicates without disclosing data,"attested_predicate; proof; verifier; validity",prover (owner) and verifier,MU Zero-Knowledge-Attestation,draft
 S7,Security Ownership & Access,Access Enforcement & Breach,"Violations as anti-value: sanctions, remedies","breach; anti_value_booking; sanction; remedy",courts (A6) + enforcement per Charter,MOS Value-Money-Coupling,draft
-A10,Polity (ext),Lawmaking & Legislative Voting,"Bills, readings, amendments, votes, enactment","bill; reading; amendment; vote; enactment",legislature (A2 branch),Akoma Ntoso; MOS voting,candidate
+A10,Polity (ext),Lawmaking & Legislative Voting,"Bills, readings, amendments, votes, enactment","bill; reading; amendment; vote; enactment",legislature (A2 branch),Akoma Ntoso; MOS voting,draft
 A11,Polity (ext),Public Office & Official,"Offices, officeholders, appointments, accountability","office; officeholder; appointment; declaration",appointing authority; register public per A12,CPSV; W3C ORG,candidate
 A12,Polity (ext),State Registry Mandate,Which registers the state must keep and how,"mandate; registrar_assignment; public_faith_rule",constitution/legislature,legal,candidate
-B10,Society (ext),Personal Health,Health status and care of a person,"condition; encounter; observation; care_plan",the person (strictest S defaults),HL7 FHIR,candidate
+B10,Society (ext),Personal Health,Health status and care of a person,"condition; encounter; observation; care_plan",the person (strictest S defaults),HL7 FHIR,draft
 B11,Society (ext),Personal Property & Assets,Person-side view of owned things,"holding; acquisition; disposal; encumbrance",the person,LADM; registers via R,candidate
 B12,Society (ext),Life Events & Civil Status,"Birth, marriage, divorce, death","life_event; civil_status; certificate_ref",the person; civil registrar keeps the register,civil registration standards,candidate
 C7,Economy (ext),Price Valuation & Appraisal,"Price observations, appraisals, indices","price_observation; appraisal; index; methodology",observing/appraising organization,SDMX; appraisal standards,candidate
@@ -92,7 +92,7 @@ O7,Organizations,Procurement & Tendering,"Tenders, bids, awards (incl. public pr
 F7,Flows & Resources,Passenger Mobility & Transit,"Routes, schedules, trips, fares, public transport","route; schedule; trip; fare; ridership",transit operators,GTFS; Transmodel,candidate
 F8,Flows & Resources,Credit Debt & Financial Instruments,"Loans, bonds, equity, collateral, holdings","instrument; issuance; holding; collateral; obligation",issuer and holder (bilateral); R2-anchored,ISO 20022; FIGI; LEI,draft
 F9,Flows & Resources,Communications & Data Transmission,"Telecom/internet as service: spectrum, addressing, traffic","network_service; spectrum_grant; address_block; traffic_aggregate",operators; spectrum = S1 commons grant,ITU; IETF; BGP registries,candidate
-A13,Polity (ext),Election & Electoral Process,"Electing officeholders: campaigns, ballots, results","election; candidacy; ballot; result; mandate_grant",Electoral registrar (independent A12 mandate),election standards,candidate
+A13,Polity (ext),Election & Electoral Process,"Electing officeholders: campaigns, ballots, results","election; candidacy; ballot; result; mandate_grant",Electoral registrar (independent A12 mandate),election standards,draft
 A14,Polity (ext),Permit License & Authorization,Application-to-grant processes for regulated activity,"application; review; grant_ref(R5); condition; revocation",authorizing sub-agent; grants live in R5,CPSV,candidate
 A15,Polity (ext),Interstate Relations & Treaties,"Foreign affairs, treaties, memberships (MUFP between polities)","treaty; party; obligation; membership",Foreign-affairs sub-agent,VCLT; MUFP,candidate
 A16,Polity (ext),Border Customs & Migration,"Border crossings, customs, residency and migration status","crossing; customs_declaration; residency_status; visa",Border sub-agent; person status self-visible,WCO; ICAO,candidate
