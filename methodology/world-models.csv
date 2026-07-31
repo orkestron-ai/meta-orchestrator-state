@@ -1,6 +1,6 @@
 ID,Cluster,MetaModel,Purpose,KeyObjects,OwnerArchetype,Bind,Status
 P1,Planet & Nature,Terrain & Landform,Physical relief and landforms of the territory,"landform; elevation; slope; region_geometry",commons steward (Territory),GeoSPARQL; INSPIRE; DEM,candidate
-P2,Planet & Nature,Land Parcel & Cadastre,Land units as registrable spatial objects,"parcel; boundary; survey; land_use_class",registrar (Land) over register; rights via S1,ISO 19152 LADM,candidate
+P2,Planet & Nature,Land Parcel & Cadastre,Land units as registrable spatial objects,"parcel; boundary; survey; land_use_class",registrar (Land) over register; rights via S1,ISO 19152 LADM,draft
 P3,Planet & Nature,Water Body & Hydrology,"Rivers, lakes, seas, aquifers and their regimes","water_body; watershed; flow_regime; water_quality",commons steward (Ecology),HY_Features; INSPIRE,candidate
 P4,Planet & Nature,Atmosphere Weather & Climate,Weather observations and climate state,"observation; forecast; climate_normal; station",commons steward (Ecology),WMO; CF conventions,candidate
 P5,Planet & Nature,Subsurface & Mineral Resource,Geology and deposits of natural resources,"formation; deposit; reserve_estimate; extraction_right_ref",commons steward; extraction rights via S1,GeoSciML; UNFC,candidate
@@ -11,14 +11,14 @@ P9,Planet & Nature,Natural Phenomenon & Hazard,"Earthquakes, floods, droughts an
 P10,Planet & Nature,Soil & Agricultural Land,Soil quality and agricultural capability,"soil_unit; fertility; capability_class; degradation",commons steward (Ecology/Agro),FAO soil classification,candidate
 M1,Matter & Artifacts,Material & Substance,Materials and chemical substances,"material; substance; hazard_class; composition",Economy sub-agent (class); holder (instance),CAS; ChEBI,candidate
 M2,Matter & Artifacts,Physical Item / Artifact,Any individual physical thing,"item; serial_identity; condition; location_ref",item owner per S1,schema:Product; asset mgmt,candidate
-M3,Matter & Artifacts,Tradable Good,Items in their market aspect,"good; classification; unit; batch",seller/holder per S1,GS1 GPC; GTIN,candidate
+M3,Matter & Artifacts,Tradable Good,Items in their market aspect,"good; classification; unit; batch",seller/holder per S1,GS1 GPC; GTIN,draft
 M4,Matter & Artifacts,Food & Drink,Nutrition goods and their safety,"food_item; ingredient; nutrition; safety_status",producer/holder,FoodOn; INFOODS,candidate
 M5,Matter & Artifacts,Medicine & Health Substance,Medicinal products and controlled substances,"medicine; active_substance; authorization; batch",producer; Health sub-agent oversight,ATC; RxNorm,candidate
 M6,Matter & Artifacts,Equipment & Machinery,Industrial and household machinery,"machine; capability; maintenance_state; certification",owner per S1,eCl@ss,candidate
 M7,Matter & Artifacts,Vehicle & Transport Means,"Vehicles across modes (road, rail, water, air)","vehicle; registration; capacity; roadworthiness",owner per S1; registrar (Vehicles),ISO 3779 VIN; registries,candidate
 M8,Matter & Artifacts,Device Sensor & Computing Hardware,Connected devices and computing equipment,"device; sensor; firmware_ref; telemetry_stream_ref",owner per S1,W3C SSN/SOSA,candidate
 M9,Matter & Artifacts,Cultural Artifact & Heritage,Artifacts of cultural and historical value,"artifact; provenance; heritage_status; custody",custodian; Culture sub-agent oversight,CIDOC-CRM,candidate
-U1,Built Environment,Building & Structure,Buildings and engineered structures,"building; structure; construction_year; condition",owner per S1,IFC; CityGML,candidate
+U1,Built Environment,Building & Structure,Buildings and engineered structures,"building; structure; construction_year; condition",owner per S1,IFC; CityGML,draft
 U2,Built Environment,Premises & Spatial Unit,"Units within structures (apartments, offices, rooms)","premise; unit_boundary; use_class; occupancy",owner per S1,LADM; BOMA,candidate
 U3,Built Environment,Physical Infrastructure Network,"Roads, rail, pipes, grids as physical networks","network; segment; node; capacity; condition",operator organization,INSPIRE; IEC CIM,candidate
 U4,Built Environment,Settlement & Urban Form,"Cities, districts and urban morphology","settlement; district; block; density",Urban sub-agent,CityGML,candidate
@@ -90,7 +90,7 @@ N12,Knowledge & Information,Intellectual Property,"Patents, trademarks, copyrigh
 O6,Organizations,Labor Market & Vacancy,"Vacancies, applications, matching, placement","vacancy; application; match; placement",posting organization; candidate side self-owned,ESCO; HR-Open,candidate
 O7,Organizations,Procurement & Tendering,"Tenders, bids, awards (incl. public procurement)","tender; bid; award; performance_bond",procuring organization; public tenders A12-registered,OCDS; UNCITRAL,candidate
 F7,Flows & Resources,Passenger Mobility & Transit,"Routes, schedules, trips, fares, public transport","route; schedule; trip; fare; ridership",transit operators,GTFS; Transmodel,candidate
-F8,Flows & Resources,Credit Debt & Financial Instruments,"Loans, bonds, equity, collateral, holdings","instrument; issuance; holding; collateral; obligation",issuer and holder (bilateral); R2-anchored,ISO 20022; FIGI; LEI,candidate
+F8,Flows & Resources,Credit Debt & Financial Instruments,"Loans, bonds, equity, collateral, holdings","instrument; issuance; holding; collateral; obligation",issuer and holder (bilateral); R2-anchored,ISO 20022; FIGI; LEI,draft
 F9,Flows & Resources,Communications & Data Transmission,"Telecom/internet as service: spectrum, addressing, traffic","network_service; spectrum_grant; address_block; traffic_aggregate",operators; spectrum = S1 commons grant,ITU; IETF; BGP registries,candidate
 A13,Polity (ext),Election & Electoral Process,"Electing officeholders: campaigns, ballots, results","election; candidacy; ballot; result; mandate_grant",Electoral registrar (independent A12 mandate),election standards,candidate
 A14,Polity (ext),Permit License & Authorization,Application-to-grant processes for regulated activity,"application; review; grant_ref(R5); condition; revocation",authorizing sub-agent; grants live in R5,CPSV,candidate
