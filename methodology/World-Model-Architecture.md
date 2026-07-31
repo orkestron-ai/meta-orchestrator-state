@@ -72,6 +72,8 @@ What agents *do*: functions and capabilities (what an agent can do), acts (atomi
 
 *Bind:* BPMN (processes), CPSV/schema:Service, PROV (attribution), iCalendar (schedules).
 
+K2 (Act) and X1 (Occurrence) are deepened together in [`Actions-and-Events.md`](./Actions-and-Events.md) (v0.1, K2/X1 rows promoted to `draft`): the act is a specialization of the occurrence, both resting on the S and R machinery.
+
 ### N. Knowledge & Information
 
 Documents and records, reports and statements, datasets and data registers, **software products and systems** (bound to AISMM: a software product's full-context model plugs in here as-is), media and creative works, models-and-ontologies as first-class objects (this catalogue itself is an N6 instance), messages and communications, identifier/naming systems.
@@ -213,5 +215,5 @@ Every model in this catalogue is a Namespace of the MOS Dimension and is expecte
 ## 8. Status and next steps
 
 - v0.1: 77 new models named and scoped. v0.2 (gap pass): **+30 more, 107 new + 38 core = 145 total**, plus the canonical meta-object roster. All new entries carry `status: candidate` in the register.
-- **S is deepened**: [`Security-Ownership-and-Access.md`](./Security-Ownership-and-Access.md) (v0.1, S rows `draft`). **R1/R2 is deepened**: [`Registry-and-Ledger.md`](./Registry-and-Ledger.md) (v0.1, R rows `draft`). Next passes (on demand, by priority): K2/X1 (acts and events: the world's verbs), then A18 (enforcement: the sharpest rights surface), then P2/M3/U1/F8 (the property-bearing nouns).
+- **Deepened so far** (v0.1 each, rows promoted to `draft`): [`Security-Ownership-and-Access.md`](./Security-Ownership-and-Access.md) (S), [`Registry-and-Ledger.md`](./Registry-and-Ledger.md) (R1/R2), [`Actions-and-Events.md`](./Actions-and-Events.md) (K2/X1, the world's verbs). Next passes (on demand, by priority): A18 (enforcement: the sharpest rights surface), then P2/M3/U1/F8 (the property-bearing nouns).
 - Deliberate omissions at this stage: taxation (replaced by value balancing, by design), military/defense detail (G3 backlog; A17 is a breadth placeholder), and anything at sub-object granularity (fields and attributes come with per-model specs).

@@ -25,7 +25,7 @@ U4,Built Environment,Settlement & Urban Form,"Cities, districts and urban morpho
 U5,Built Environment,Utility Service Point,"Connections for water, heat, power, sewage","service_point; connection; meter; tariff_ref",utility operator,IEC CIM,candidate
 U6,Built Environment,Construction & Works,Construction projects and works in progress,"work; permit; stage; acceptance",developer organization; permits via A,IFC processes,candidate
 K1,Activity & Work,Function & Capability,What an agent is able to do,"function; capability; proficiency; capacity",the capable agent,ESCO (skills); V1,candidate
-K2,Activity & Work,Act / Action,"Atomic actions: who did what, to what, when, where","act; actor_ref; object_ref; time; place; outcome",the acting agent,PROV; MU Event,candidate
+K2,Activity & Work,Act / Action,"Atomic actions: who did what, to what, when, where","act; actor_ref; object_ref; time; place; outcome",the acting agent,PROV; MU Event,draft
 K3,Activity & Work,Process & Workflow,Repeatable multi-step activities,"process; step; role; state",process owner (org or agent),BPMN,candidate
 K4,Activity & Work,Service,Defined offerings and their delivery,"service; offer; delivery; quality_level",service provider,CPSV; schema:Service,candidate
 K5,Activity & Work,Project,Bounded undertakings with goals and resources,"project; goal; milestone; resource_allocation",sponsoring organization,PROV; PM practice,candidate
@@ -56,7 +56,7 @@ F3,Flows & Resources,Goods Movement & Logistics,Physical movement of goods,"ship
 F4,Flows & Resources,Water & Food Supply,Supply chains of water and food,"supply_chain; source; treatment; distribution",operators; Agro/Health oversight,FAO; EPCIS,candidate
 F5,Flows & Resources,Waste & Circular Flows,"Waste streams, recycling, circular loops","waste_stream; treatment; recovery; disposal",generator and processor,EU waste codes,candidate
 F6,Flows & Resources,Emission & Environmental Flux,Emissions and environmental releases,"emission; source_ref; quantity; abatement",emitting owner; Ecology verification,GHG Protocol,candidate
-X1,Events & Phenomena,Occurrence / Event,"Generic events: what happened, when, where, who","occurrence; participant; time; place; cause_ref",primary actor or observing registrar,MU Event; OWL-Time,candidate
+X1,Events & Phenomena,Occurrence / Event,"Generic events: what happened, when, where, who","occurrence; participant; time; place; cause_ref",primary actor or observing registrar,MU Event; OWL-Time,draft
 X2,Events & Phenomena,Observed Phenomenon,Recurring natural or social patterns,"phenomenon; observation_series; extent; trend",observing steward,SSN; statistics,candidate
 X3,Events & Phenomena,Incident & Emergency,Harm events requiring response,"incident; severity; response; resolution",Emergency sub-agent,CAP,candidate
 X4,Events & Phenomena,Situation & Condition,States of affairs holding over time,"situation; subject_ref; interval; status",subject's owner,OWL-Time,candidate
