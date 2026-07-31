@@ -1,6 +1,6 @@
 # World Model Architecture: the broad-coverage meta-model catalogue
 
-> **Status:** DRAFT v0.1 (breadth-first pass, 2026-07-31). Companion register: [`world-models.csv`](./world-models.csv).
+> **Status:** DRAFT v0.2 (breadth-first pass + second gap pass, 2026-07-31). Companion register: [`world-models.csv`](./world-models.csv).
 > **Relation to the core:** [`meta-models.csv`](./meta-models.csv) (38 models, clusters V/A/B/C/D/E) remains the **governance kernel** of MOS. This document extends it into a **world-coverage catalogue**: the set of meta-models sufficient to describe, at instance level, the human world and what happens on planet Earth. The goal of this pass is **breadth, not detail**: every model here is a named, owned, one-line-scoped namespace; full specification comes later, model by model, on demand.
 
 ---
@@ -11,7 +11,7 @@ MOS models a polity as one Meta-Universe Dimension: Namespaces = meta-models, Ob
 
 Three commitments shape this catalogue:
 
-1. **Breadth first.** ~115 meta-models across 16 clusters, each scoped in one line. It is far cheaper to split or deepen a model later than to discover a missing continent of reality.
+1. **Breadth first.** 145 meta-models across 16 clusters, each scoped in one line. It is far cheaper to split or deepen a model later than to discover a missing continent of reality.
 2. **Assembly, not authorship.** Nearly every cluster binds existing external standards (GS1, IFC, FHIR, CIM, DCAT, W3C ORG, ISO suites...) via the Meta-Universe composition rules; MOS models the *delta* (value semantics, ownership, governance hooks).
 3. **Ownership and access are architecture, not policy.** Every meta-object has exactly one controlling meta-object (its owner), and **nothing is readable without the owner's permission**. Security is a first-class cluster (S), and its rules bind every other cluster (§5, §6).
 
@@ -20,21 +20,21 @@ Three commitments shape this catalogue:
 | Cluster | Scope | Status |
 |---------|-------|--------|
 | **V. Value Substrate** | value transformers, Æ-vector, flows, anti-value, frames | core (exists) |
-| **A. Polity** | charter, constitution, branches, ministries, law, courts, rights | core (exists) + A10-A12 |
-| **B. Society** | citizens, roles, families, reputation, needs, parties, experts | core (exists) + B10-B12 |
-| **C. Economy** | business, markets, work, settlement, routing | core (exists) + C7-C8 |
-| **D. Civilization** | missions, science, culture, ecology-as-value | core (exists) |
+| **A. Polity** | charter, constitution, branches, ministries, law, courts, rights + lawmaking/voting, offices, registry mandates, elections, permits, treaties, borders, defense, enforcement | core + A10-A18 |
+| **B. Society** | citizens, roles, families, reputation, needs, parties, experts + health, property, life events, benefits, public health | core + B10-B14 |
+| **C. Economy** | business, markets, work, settlement, routing + prices, insurance | core + C7-C8 |
+| **D. Civilization** | missions, science, culture, ecology-as-value + sport, religion, tourism, discourse, norms | core + D5-D9 |
 | **E. Runtime** | agent-citizens, sim time, observation, control | core (exists) |
-| **P. Planet & Nature** | terrain, land, water, weather, subsurface, flora, fauna, hazards | new (10) |
+| **P. Planet & Nature** | terrain, land, water, weather, subsurface, flora, fauna, hazards, space | new (11) |
 | **M. Matter & Artifacts** | materials, items, goods, food, medicines, machines, vehicles, devices | new (9) |
-| **U. Built Environment** | buildings, premises, physical networks, settlements, utilities, works | new (6) |
-| **K. Activity & Work** | functions, acts, processes, services, projects, methods, plans | new (7) |
-| **N. Knowledge & Information** | documents, reports, datasets, software, media, models, messages, identifiers | new (8) |
-| **O. Organizations** | organizations, units, membership, mandates, commercial contracts | new (5) |
+| **U. Built Environment** | buildings, premises, physical networks, settlements, utilities, works, addresses | new (7) |
+| **K. Activity & Work** | functions, acts, processes, services, projects, methods, plans + manufacturing, agriculture, extraction, maintenance, care delivery | new (12) |
+| **N. Knowledge & Information** | documents, reports, datasets, software, media, models, messages, identifiers + language, statistics, calendars, IP | new (12) |
+| **O. Organizations** | organizations, units, membership, mandates, commercial contracts + labor market, procurement | new (7) |
 | **R. Registries & Ledgers** | the registry pattern, ledgers, event registers, identity, attestations | new (6) |
-| **F. Flows & Resources** | energy, money, logistics, supply, waste, emissions | new (6) |
+| **F. Flows & Resources** | energy, money, logistics, supply, waste, emissions + transit, financial instruments, communications | new (9) |
 | **X. Events & Phenomena** | occurrences, phenomena, incidents, situations, interactions | new (5) |
-| **S. Security, Ownership & Access** | ownership graph, access contracts, disclosure, audit, aggregation, ZK, enforcement | new (7) |
+| **S. Security, Ownership & Access** | ownership graph, access contracts, disclosure, audit, aggregation, ZK, enforcement + cyber integrity | new (8) |
 
 Full per-model tables are in [`world-models.csv`](./world-models.csv); the sections below give each cluster's intent, owner archetypes and the highest-signal models.
 
@@ -116,6 +116,44 @@ The generic occurrence layer: X1 Occurrence (what happened: time, place, partici
 
 The cluster the rest of the catalogue depends on; specified in §5 and §6.
 
+### The second gap pass (v0.2): the unnamed necessities
+
+A systematic sweep for what the first pass and the original brief both missed. Thirty additions, by the hole they close:
+
+- **Rule of law has verbs, not just nouns.** A5 held laws-in-force; now **A13 Elections** (choosing officeholders, distinct from A10 legislative voting), **A14 Permits and Authorizations** (the application-to-grant machinery behind every regulated activity), and **A18 Offense, Investigation and Enforcement** (crimes, cases, penalties, corrections: the largest single omission of pass one) complete the loop from choosing rulers to enforcing rules.
+- **The polity has an outside.** **A15 Interstate Relations and Treaties** (federation between polities: MUFP applied to states) and **A16 Border, Customs and Migration**; **A17 Defense** enters as a breadth placeholder (detail stays in the G3 backlog).
+- **The economy produces before it trades.** **K8 Manufacturing**, **K9 Agriculture and Husbandry**, **K10 Extraction Operations** (the *operation* over a P5 deposit, under an S1 commons grant, with restoration duties) and **K11 Maintenance** (the quiet half of every asset's life). **K12 Health Care Delivery** gives B10 (personal health) its system side.
+- **Finance is more than money.** **F8 Credit, Debt and Financial Instruments** (loans, bonds, equity, collateral: F2 held only money itself); **C7/C8 already covered prices and insurance.**
+- **Movement of people, not only goods.** **F7 Passenger Mobility and Transit**; and the invisible infrastructure everything else rides on: **F9 Communications and Data Transmission** (spectrum as an S1 commons grant).
+- **Civil society exists.** **D5 Sport and Recreation**, **D6 Religion and Belief Institutions** (self-owned, strong S defaults), **D7 Tourism and Hospitality**, **D8 Public Discourse and Opinion** (ties to the epistemic axis and B8), **D9 Social Norms and Customs**: the informal "rules" the original brief asked for that are not laws.
+- **Reference systems people forget until they break.** **N9 Language and Terminology**, **N10 Official Statistics and Census** (S5-bound by construction), **N11 Time and Calendar** (time zones, holidays), **N12 Intellectual Property**, **U7 Addresses and Location References**, **P11 Space and Orbital Objects**.
+- **Work about work.** **O6 Labor Market and Vacancies**, **O7 Procurement and Tendering** (public tenders A12-registered by default).
+- **Security of systems, not only of data.** **S8 Cyber Integrity** (vulnerabilities and incidents of N4 software and M8 devices: S1-S7 govern *who may read*; S8 governs *whether the substrate itself is sound*).
+
+Deliberately still out: taxation (MOS replaces it by design), sub-object detail everywhere, and military depth (G3).
+
+### The canonical meta-object roster
+
+Meta-models are classes; the polity also needs its named **singleton meta-objects**: the concrete owners and stewards the S1 graph bottoms out in. The roster (each is an O1/A3 object with an A-cluster mandate):
+
+| Meta-object | Controls / stewards |
+|---|---|
+| **The Polity** (root) | the Dimension itself; the Charter and constitution (A0/A1) |
+| **The Legislature** | A10 lawmaking, A5 laws |
+| **The Courts** | A6 cases, judicial S2 access contracts, S7 breach adjudication |
+| **The Meta-Orchestrator** (coordinator, not sovereign) | E4 control policies, the balancing loop |
+| **State Sub-Agents** (Demography, Science, Cognitive, Infrastructure, Ecology, Territory, Urban, Economy, Health, Social, Knowledge, Energy, Space, Emergency, Foreign Affairs, Border, Defense, Enforcement) | their value axis + the clusters marked to them in §3 |
+| **The Statistics Steward** | N10, S5 aggregation (independent by mandate, S5-bound by construction) |
+| **The Registrar-General** and per-domain registrars (land, civil, commercial, vehicles, identity, IP, elections) | R1 instances under A12 mandates |
+| **The Ledger Operator** (Æ) and **Settlement Rail Operator** ($) | R2 instances |
+| **The Audit Registrar** | S4 access logs (reads everything about reads, nothing about content) |
+| **The CERT Steward** | S8 coordination |
+| **Commons Stewards** | P-cluster nature, spectrum (F9), orbital slots (P11) |
+| **Every citizen** (B1) | their personal namespaces: the most numerous sovereigns in the system |
+| **Every organization** (O1) | its own namespaces, through officers |
+
+The roster is itself data: an R1 register of mandates, so "who stewards what" is a query, never lore.
+
 ### Extensions to existing clusters
 
 - **A10 Lawmaking & Legislative Voting**: bill, draft versions, readings, amendments, the vote itself (ballots, quorum, weights per the voting doctrine), enactment and entry into force. Closes the loop between B7 (parties/delegation) and A5 (law-in-force): a law is the *output event* of an A10 process. Bind: Akoma Ntoso (bills), the MOS voting mechanics.
@@ -172,6 +210,6 @@ Every model in this catalogue is a Namespace of the MOS Dimension and is expecte
 
 ## 8. Status and next steps
 
-- This pass: **77 new models named and scoped** (+ 38 core = 115 total), owner archetypes assigned, interaction and security rules fixed. All new entries carry `status: candidate` in the register.
-- Next passes (on demand, by priority): deepen S (it gates everything), then R1/R2 (the registry and ledger patterns), then K2/X1 (acts and events: the world's verbs), then P2/M3/U1 (the property-bearing nouns).
-- Deliberate omissions at this stage: military/defense detail (G3 backlog), interstate relations (federation of polities: MUFP applies), belief systems as institutions (fold into O1/D3 until demanded), and anything at sub-object granularity (fields and attributes come with per-model specs).
+- v0.1: 77 new models named and scoped. v0.2 (gap pass): **+30 more, 107 new + 38 core = 145 total**, plus the canonical meta-object roster. All new entries carry `status: candidate` in the register.
+- Next passes (on demand, by priority): deepen S (it gates everything), then R1/R2 (the registry and ledger patterns), then K2/X1 (acts and events: the world's verbs), then A18 (enforcement: the sharpest rights surface), then P2/M3/U1/F8 (the property-bearing nouns).
+- Deliberate omissions at this stage: taxation (replaced by value balancing, by design), military/defense detail (G3 backlog; A17 is a breadth placeholder), and anything at sub-object granularity (fields and attributes come with per-model specs).
