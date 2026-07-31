@@ -114,7 +114,7 @@ The generic occurrence layer: X1 Occurrence (what happened: time, place, partici
 
 ### S. Security, Ownership & Access
 
-The cluster the rest of the catalogue depends on; specified in §5 and §6.
+The cluster the rest of the catalogue depends on. Sections 5 and 6 below remain the summary; the full deep specification (S1-S8, adversarially hardened) is [`Security-Ownership-and-Access.md`](./Security-Ownership-and-Access.md), which governs on conflict.
 
 ### The second gap pass (v0.2): the unnamed necessities
 
@@ -211,5 +211,5 @@ Every model in this catalogue is a Namespace of the MOS Dimension and is expecte
 ## 8. Status and next steps
 
 - v0.1: 77 new models named and scoped. v0.2 (gap pass): **+30 more, 107 new + 38 core = 145 total**, plus the canonical meta-object roster. All new entries carry `status: candidate` in the register.
-- Next passes (on demand, by priority): deepen S (it gates everything), then R1/R2 (the registry and ledger patterns), then K2/X1 (acts and events: the world's verbs), then A18 (enforcement: the sharpest rights surface), then P2/M3/U1/F8 (the property-bearing nouns).
+- **S is deepened**: [`Security-Ownership-and-Access.md`](./Security-Ownership-and-Access.md) (v0.1, S rows promoted to `draft`). Next passes (on demand, by priority): R1/R2 (the registry and ledger patterns S4/S5 now presuppose), then K2/X1 (acts and events: the world's verbs), then A18 (enforcement: the sharpest rights surface), then P2/M3/U1/F8 (the property-bearing nouns).
 - Deliberate omissions at this stage: taxation (replaced by value balancing, by design), military/defense detail (G3 backlog; A17 is a breadth placeholder), and anything at sub-object granularity (fields and attributes come with per-model specs).
