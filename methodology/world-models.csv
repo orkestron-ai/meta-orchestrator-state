@@ -44,8 +44,8 @@ O2,Organizations,Organizational Unit,Internal structure of organizations,"unit; 
 O3,Organizations,Employment & Membership,Relations between persons and organizations,"employment; membership; role_ref; term",both parties (bilateral record),ESCO; HR standards,candidate
 O4,Organizations,Organizational Mandate & Charter,Constitutive rules of an organization,"charter; mandate; power; accountability",the organization; A oversight for public bodies,legal templates,candidate
 O5,Organizations,Commercial Contract & Agreement,Agreements between parties,"contract; party; obligation; performance_status",the parties (bilateral); courts via A6,UNCITRAL; legal XML,candidate
-R1,Registries & Ledgers,Registry (pattern),"The generic register: entries, evidence, registrar, legal effect","register; entry; evidence; effect",registrar per A12 mandate,MU registry doctrine,candidate
-R2,Registries & Ledgers,Ledger & Account,Append-only accounts of quantity movements,"ledger; account; posting; balance",ledger operator (Æ: state; $: settlement rail),ISO 20022,candidate
+R1,Registries & Ledgers,Registry (pattern),"The generic register: entries, evidence, registrar, legal effect","register; entry; evidence; effect",registrar per A12 mandate,MU registry doctrine,draft
+R2,Registries & Ledgers,Ledger & Account,Append-only accounts of quantity movements,"ledger; account; posting; balance",ledger operator (Æ: state; $: settlement rail),ISO 20022,draft
 R3,Registries & Ledgers,Event Register,Semantic-Timeline event stores per domain,"event_log; event_ref; sequence; integrity_proof",domain registrar,MU Event; Merkle logs,candidate
 R4,Registries & Ledgers,Identity Register,"Anchoring identity of persons, orgs, things","identity; identifier_binding; status; key",registrar (Identity); subject rights via S,W3C DID,candidate
 R5,Registries & Ledgers,Attestation Certificate & License,Issued claims with validity,"attestation; issuer; subject; validity; revocation",issuer; subject holds copy,W3C Verifiable Credentials,candidate

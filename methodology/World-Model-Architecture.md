@@ -96,6 +96,8 @@ The system-of-record layer, made generic: **R1 Registry** is the reusable patter
 
 *Bind:* ISO 20022 (accounts), W3C DID (identity), W3C Verifiable Credentials (attestations), Meta-Universe registry doctrine.
 
+R1 and R2 are deepened in [`Registry-and-Ledger.md`](./Registry-and-Ledger.md) (v0.1, R rows promoted to `draft`).
+
 ### F. Flows & Resources
 
 The moving quantities: energy (carriers, generation, consumption, grid balance), money and monetary instruments (the $ side of the two-layer system; Æ stays in V), goods movement and logistics, water and food supply chains, waste and circular flows, emissions and environmental flux. F models are where physical flows meet V3 value flows: every F flow MAY carry an Æ-delta annotation.
@@ -211,5 +213,5 @@ Every model in this catalogue is a Namespace of the MOS Dimension and is expecte
 ## 8. Status and next steps
 
 - v0.1: 77 new models named and scoped. v0.2 (gap pass): **+30 more, 107 new + 38 core = 145 total**, plus the canonical meta-object roster. All new entries carry `status: candidate` in the register.
-- **S is deepened**: [`Security-Ownership-and-Access.md`](./Security-Ownership-and-Access.md) (v0.1, S rows promoted to `draft`). Next passes (on demand, by priority): R1/R2 (the registry and ledger patterns S4/S5 now presuppose), then K2/X1 (acts and events: the world's verbs), then A18 (enforcement: the sharpest rights surface), then P2/M3/U1/F8 (the property-bearing nouns).
+- **S is deepened**: [`Security-Ownership-and-Access.md`](./Security-Ownership-and-Access.md) (v0.1, S rows `draft`). **R1/R2 is deepened**: [`Registry-and-Ledger.md`](./Registry-and-Ledger.md) (v0.1, R rows `draft`). Next passes (on demand, by priority): K2/X1 (acts and events: the world's verbs), then A18 (enforcement: the sharpest rights surface), then P2/M3/U1/F8 (the property-bearing nouns).
 - Deliberate omissions at this stage: taxation (replaced by value balancing, by design), military/defense detail (G3 backlog; A17 is a breadth placeholder), and anything at sub-object granularity (fields and attributes come with per-model specs).
