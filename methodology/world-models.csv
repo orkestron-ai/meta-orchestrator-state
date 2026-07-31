@@ -78,7 +78,7 @@ C7,Economy (ext),Price Valuation & Appraisal,"Price observations, appraisals, in
 C8,Economy (ext),Insurance & Risk Pooling,"Policies, pools, claims as value routing","policy; pool; premium; claim",insurer and insured (bilateral),ACORD,candidate
 P11,Planet & Nature,Space & Orbital Objects,"Satellites, orbits, debris, space weather","space_object; orbit; ownership_ref; space_weather",Space sub-agent; asset owners per S1,UN registry; CCSDS,candidate
 U7,Built Environment,Address & Location Referencing,"Addresses, geocodes, points of interest","address; geocode; poi; reference_system",Address registrar (A12 mandate),ISO 19160; UPU S42,candidate
-K8,Activity & Work,Production & Manufacturing,Transforming materials into goods,"production_run; plant_ref; bill_of_materials; batch; yield",producing organization,ISA-95; GS1,candidate
+K8,Activity & Work,Production & Manufacturing,Transforming materials into goods,"production_run; plant_ref; bill_of_materials; batch; yield",producing organization,ISA-95; GS1,draft
 K9,Activity & Work,Agriculture & Husbandry,"Farms, crops, livestock, seasons, harvest","farm; crop; livestock; season; harvest",farming organization/person,AGROVOC; FAO,candidate
 K10,Activity & Work,Resource Extraction Operations,"Mining, drilling, logging, fishing as operations","operation; site_ref(P5); quota; output; restoration_duty",extracting org under S1 commons grant,UNFC; fisheries stds,candidate
 K11,Activity & Work,Maintenance & Repair,Upkeep of assets and infrastructure,"maintenance_act; asset_ref; schedule; condition_delta",asset owner or contracted operator,ISO 55000,candidate
