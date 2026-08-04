@@ -39,11 +39,11 @@ N5,Knowledge & Information,Media & Creative Work,"Works of media, art and entert
 N6,Knowledge & Information,Model & Ontology,Models and ontologies as first-class objects,"model; version; fingerprint; conformance",model steward,Meta-Universe (MMAS),candidate
 N7,Knowledge & Information,Message & Communication,Communications between agents,"message; channel; thread; delivery_status",sender (owner of the message record),email/messaging standards,candidate
 N8,Knowledge & Information,Identifier & Naming System,Identifier schemes and namespaces,"scheme; identifier; assignment; resolution",scheme registrar,ISO identifier suites,candidate
-O1,Organizations,Organization,"Any organization: company, NGO, community, institution","organization; legal_form; registration; purpose",the organization (via officers),W3C ORG; LEI; NACE,candidate
+O1,Organizations,Organization,"Any organization: company, NGO, community, institution","organization; legal_form; registration; purpose",the organization (via officers),W3C ORG; LEI; NACE,draft
 O2,Organizations,Organizational Unit,Internal structure of organizations,"unit; reporting_line; mandate; headcount",parent organization,W3C ORG,candidate
-O3,Organizations,Employment & Membership,Relations between persons and organizations,"employment; membership; role_ref; term",both parties (bilateral record),ESCO; HR standards,candidate
+O3,Organizations,Employment & Membership,Relations between persons and organizations,"employment; membership; role_ref; term",both parties (bilateral record),ESCO; HR standards,draft
 O4,Organizations,Organizational Mandate & Charter,Constitutive rules of an organization,"charter; mandate; power; accountability",the organization; A oversight for public bodies,legal templates,candidate
-O5,Organizations,Commercial Contract & Agreement,Agreements between parties,"contract; party; obligation; performance_status",the parties (bilateral); courts via A6,UNCITRAL; legal XML,candidate
+O5,Organizations,Commercial Contract & Agreement,Agreements between parties,"contract; party; obligation; performance_status",the parties (bilateral); courts via A6,UNCITRAL; legal XML,draft
 R1,Registries & Ledgers,Registry (pattern),"The generic register: entries, evidence, registrar, legal effect","register; entry; evidence; effect",registrar per A12 mandate,MU registry doctrine,draft
 R2,Registries & Ledgers,Ledger & Account,Append-only accounts of quantity movements,"ledger; account; posting; balance",ledger operator (Æ: state; $: settlement rail),ISO 20022,draft
 R3,Registries & Ledgers,Event Register,Semantic-Timeline event stores per domain,"event_log; event_ref; sequence; integrity_proof",domain registrar,MU Event; Merkle logs,candidate
