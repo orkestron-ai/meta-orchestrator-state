@@ -57,10 +57,10 @@ F4,Flows & Resources,Water & Food Supply,Supply chains of water and food,"supply
 F5,Flows & Resources,Waste & Circular Flows,"Waste streams, recycling, circular loops","waste_stream; treatment; recovery; disposal",generator and processor,EU waste codes,draft
 F6,Flows & Resources,Emission & Environmental Flux,Emissions and environmental releases,"emission; source_ref; quantity; abatement",emitting owner; Ecology verification,GHG Protocol,draft
 X1,Events & Phenomena,Occurrence / Event,"Generic events: what happened, when, where, who","occurrence; participant; time; place; cause_ref",primary actor or observing registrar,MU Event; OWL-Time,draft
-X2,Events & Phenomena,Observed Phenomenon,Recurring natural or social patterns,"phenomenon; observation_series; extent; trend",observing steward,SSN; statistics,candidate
-X3,Events & Phenomena,Incident & Emergency,Harm events requiring response,"incident; severity; response; resolution",Emergency sub-agent,CAP,candidate
-X4,Events & Phenomena,Situation & Condition,States of affairs holding over time,"situation; subject_ref; interval; status",subject's owner,OWL-Time,candidate
-X5,Events & Phenomena,Encounter & Interaction,"Meetings, transactions, encounters between agents","interaction; parties; channel; outcome",parties (bilateral record),PROV,candidate
+X2,Events & Phenomena,Observed Phenomenon,Recurring natural or social patterns,"phenomenon; observation_series; extent; trend",observing steward,SSN; statistics,draft
+X3,Events & Phenomena,Incident & Emergency,Harm events requiring response,"incident; severity; response; resolution",Emergency sub-agent,CAP,draft
+X4,Events & Phenomena,Situation & Condition,States of affairs holding over time,"situation; subject_ref; interval; status",subject's owner,OWL-Time,draft
+X5,Events & Phenomena,Encounter & Interaction,"Meetings, transactions, encounters between agents","interaction; parties; channel; outcome",parties (bilateral record),PROV,draft
 S1,Security Ownership & Access,Meta-Object Ownership & Stewardship,"Who controls every meta-object; transfers, delegation, guardianship","ownership; steward; delegation; transfer_event",the polity's root registry (constitutional),LADM (rights); MU,draft
 S2,Security Ownership & Access,Access Contract & Consent,Machine-readable permission to read,"access_contract; grantor; grantee; scope; revocation",the data owner (grantor),MU Contract; ODRL,draft
 S3,Security Ownership & Access,Disclosure Scope & Projection Policy,"The shape data leaves in: subset, summary, aggregate","projection_policy; field_scope; aggregation_level",the data owner,MU Projection; Consent-and-Disclosure,draft
@@ -69,8 +69,8 @@ S5,Security Ownership & Access,Privacy Aggregation & Cohort Floor,State sensing 
 S6,Security Ownership & Access,Verification & ZK Attestation,Prove predicates without disclosing data,"attested_predicate; proof; verifier; validity",prover (owner) and verifier,MU Zero-Knowledge-Attestation,draft
 S7,Security Ownership & Access,Access Enforcement & Breach,"Violations as anti-value: sanctions, remedies","breach; anti_value_booking; sanction; remedy",courts (A6) + enforcement per Charter,MOS Value-Money-Coupling,draft
 A10,Polity (ext),Lawmaking & Legislative Voting,"Bills, readings, amendments, votes, enactment","bill; reading; amendment; vote; enactment",legislature (A2 branch),Akoma Ntoso; MOS voting,draft
-A11,Polity (ext),Public Office & Official,"Offices, officeholders, appointments, accountability","office; officeholder; appointment; declaration",appointing authority; register public per A12,CPSV; W3C ORG,candidate
-A12,Polity (ext),State Registry Mandate,Which registers the state must keep and how,"mandate; registrar_assignment; public_faith_rule",constitution/legislature,legal,candidate
+A11,Polity (ext),Public Office & Official,"Offices, officeholders, appointments, accountability","office; officeholder; appointment; declaration",appointing authority; register public per A12,CPSV; W3C ORG,draft
+A12,Polity (ext),State Registry Mandate,Which registers the state must keep and how,"mandate; registrar_assignment; public_faith_rule",constitution/legislature,legal,draft
 B10,Society (ext),Personal Health,Health status and care of a person,"condition; encounter; observation; care_plan",the person (strictest S defaults),HL7 FHIR,draft
 B11,Society (ext),Personal Property & Assets,Person-side view of owned things,"holding; acquisition; disposal; encumbrance",the person,LADM; registers via R,draft
 B12,Society (ext),Life Events & Civil Status,"Birth, marriage, divorce, death","life_event; civil_status; certificate_ref",the person; civil registrar keeps the register,civil registration standards,draft
@@ -93,7 +93,7 @@ F7,Flows & Resources,Passenger Mobility & Transit,"Routes, schedules, trips, far
 F8,Flows & Resources,Credit Debt & Financial Instruments,"Loans, bonds, equity, collateral, holdings","instrument; issuance; holding; collateral; obligation",issuer and holder (bilateral); R2-anchored,ISO 20022; FIGI; LEI,draft
 F9,Flows & Resources,Communications & Data Transmission,"Telecom/internet as service: spectrum, addressing, traffic","network_service; spectrum_grant; address_block; traffic_aggregate",operators; spectrum = S1 commons grant,ITU; IETF; BGP registries,draft
 A13,Polity (ext),Election & Electoral Process,"Electing officeholders: campaigns, ballots, results","election; candidacy; ballot; result; mandate_grant",Electoral registrar (independent A12 mandate),election standards,draft
-A14,Polity (ext),Permit License & Authorization,Application-to-grant processes for regulated activity,"application; review; grant_ref(R5); condition; revocation",authorizing sub-agent; grants live in R5,CPSV,candidate
+A14,Polity (ext),Permit License & Authorization,Application-to-grant processes for regulated activity,"application; review; grant_ref(R5); condition; revocation",authorizing sub-agent; grants live in R5,CPSV,draft
 A15,Polity (ext),Interstate Relations & Treaties,"Foreign affairs, treaties, memberships (MUFP between polities)","treaty; party; obligation; membership",Foreign-affairs sub-agent,VCLT; MUFP,candidate
 A16,Polity (ext),Border Customs & Migration,"Border crossings, customs, residency and migration status","crossing; customs_declaration; residency_status; visa",Border sub-agent; person status self-visible,WCO; ICAO,candidate
 A17,Polity (ext),Defense & Security Forces,"Forces, assets, mandates (breadth placeholder; detail = G3)","force; asset_ref; mandate; readiness",Defense sub-agent (tightest S defaults),NATO stds (ref),candidate
