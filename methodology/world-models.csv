@@ -19,11 +19,11 @@ M7,Matter & Artifacts,Vehicle & Transport Means,"Vehicles across modes (road, ra
 M8,Matter & Artifacts,Device Sensor & Computing Hardware,Connected devices and computing equipment,"device; sensor; firmware_ref; telemetry_stream_ref",owner per S1,W3C SSN/SOSA,candidate
 M9,Matter & Artifacts,Cultural Artifact & Heritage,Artifacts of cultural and historical value,"artifact; provenance; heritage_status; custody",custodian; Culture sub-agent oversight,CIDOC-CRM,candidate
 U1,Built Environment,Building & Structure,Buildings and engineered structures,"building; structure; construction_year; condition",owner per S1,IFC; CityGML,draft
-U2,Built Environment,Premises & Spatial Unit,"Units within structures (apartments, offices, rooms)","premise; unit_boundary; use_class; occupancy",owner per S1,LADM; BOMA,candidate
-U3,Built Environment,Physical Infrastructure Network,"Roads, rail, pipes, grids as physical networks","network; segment; node; capacity; condition",operator organization,INSPIRE; IEC CIM,candidate
-U4,Built Environment,Settlement & Urban Form,"Cities, districts and urban morphology","settlement; district; block; density",Urban sub-agent,CityGML,candidate
-U5,Built Environment,Utility Service Point,"Connections for water, heat, power, sewage","service_point; connection; meter; tariff_ref",utility operator,IEC CIM,candidate
-U6,Built Environment,Construction & Works,Construction projects and works in progress,"work; permit; stage; acceptance",developer organization; permits via A,IFC processes,candidate
+U2,Built Environment,Premises & Spatial Unit,"Units within structures (apartments, offices, rooms)","premise; unit_boundary; use_class; occupancy",owner per S1,LADM; BOMA,draft
+U3,Built Environment,Physical Infrastructure Network,"Roads, rail, pipes, grids as physical networks","network; segment; node; capacity; condition",operator organization,INSPIRE; IEC CIM,draft
+U4,Built Environment,Settlement & Urban Form,"Cities, districts and urban morphology","settlement; district; block; density",Urban sub-agent,CityGML,draft
+U5,Built Environment,Utility Service Point,"Connections for water, heat, power, sewage","service_point; connection; meter; tariff_ref",utility operator,IEC CIM,draft
+U6,Built Environment,Construction & Works,Construction projects and works in progress,"work; permit; stage; acceptance",developer organization; permits via A,IFC processes,draft
 K1,Activity & Work,Function & Capability,What an agent is able to do,"function; capability; proficiency; capacity",the capable agent,ESCO (skills); V1,candidate
 K2,Activity & Work,Act / Action,"Atomic actions: who did what, to what, when, where","act; actor_ref; object_ref; time; place; outcome",the acting agent,PROV; MU Event,draft
 K3,Activity & Work,Process & Workflow,Repeatable multi-step activities,"process; step; role; state",process owner (org or agent),BPMN,candidate
@@ -77,7 +77,7 @@ B12,Society (ext),Life Events & Civil Status,"Birth, marriage, divorce, death","
 C7,Economy (ext),Price Valuation & Appraisal,"Price observations, appraisals, indices","price_observation; appraisal; index; methodology",observing/appraising organization,SDMX; appraisal standards,candidate
 C8,Economy (ext),Insurance & Risk Pooling,"Policies, pools, claims as value routing","policy; pool; premium; claim",insurer and insured (bilateral),ACORD,candidate
 P11,Planet & Nature,Space & Orbital Objects,"Satellites, orbits, debris, space weather","space_object; orbit; ownership_ref; space_weather",Space sub-agent; asset owners per S1,UN registry; CCSDS,candidate
-U7,Built Environment,Address & Location Referencing,"Addresses, geocodes, points of interest","address; geocode; poi; reference_system",Address registrar (A12 mandate),ISO 19160; UPU S42,candidate
+U7,Built Environment,Address & Location Referencing,"Addresses, geocodes, points of interest","address; geocode; poi; reference_system",Address registrar (A12 mandate),ISO 19160; UPU S42,draft
 K8,Activity & Work,Production & Manufacturing,Transforming materials into goods,"production_run; plant_ref; bill_of_materials; batch; yield",producing organization,ISA-95; GS1,draft
 K9,Activity & Work,Agriculture & Husbandry,"Farms, crops, livestock, seasons, harvest","farm; crop; livestock; season; harvest",farming organization/person,AGROVOC; FAO,candidate
 K10,Activity & Work,Resource Extraction Operations,"Mining, drilling, logging, fishing as operations","operation; site_ref(P5); quota; output; restoration_duty",extracting org under S1 commons grant,UNFC; fisheries stds,candidate
