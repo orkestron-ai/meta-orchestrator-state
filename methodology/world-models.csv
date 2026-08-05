@@ -51,10 +51,10 @@ R4,Registries & Ledgers,Identity Register,"Anchoring identity of persons, orgs, 
 R5,Registries & Ledgers,Attestation Certificate & License,Issued claims with validity,"attestation; issuer; subject; validity; revocation",issuer; subject holds copy,W3C Verifiable Credentials,candidate
 R6,Registries & Ledgers,Registry Federation & Mirroring,Reference-not-copy rules between registers,"federation_link; mirror; freshness; authority",registrars jointly,MU ARCH-018; MUFP,candidate
 F1,Flows & Resources,Energy,"Energy carriers, generation, consumption, balance","carrier; generation; consumption; grid_balance",grid/asset operators; Energy sub-agent,IEC CIM,draft
-F2,Flows & Resources,Money & Monetary Instrument,Money as instrument ($ side of the two-layer system),"currency; instrument; holding; payment",holder; settlement rail operator,ISO 4217; ISO 20022,candidate
+F2,Flows & Resources,Money & Monetary Instrument,Money as instrument ($ side of the two-layer system),"currency; instrument; holding; payment",holder; settlement rail operator,ISO 4217; ISO 20022,draft
 F3,Flows & Resources,Goods Movement & Logistics,Physical movement of goods,"shipment; route; custody_chain; event",shipper/carrier (per leg),UN/CEFACT; EPCIS,draft
-F4,Flows & Resources,Water & Food Supply,Supply chains of water and food,"supply_chain; source; treatment; distribution",operators; Agro/Health oversight,FAO; EPCIS,candidate
-F5,Flows & Resources,Waste & Circular Flows,"Waste streams, recycling, circular loops","waste_stream; treatment; recovery; disposal",generator and processor,EU waste codes,candidate
+F4,Flows & Resources,Water & Food Supply,Supply chains of water and food,"supply_chain; source; treatment; distribution",operators; Agro/Health oversight,FAO; EPCIS,draft
+F5,Flows & Resources,Waste & Circular Flows,"Waste streams, recycling, circular loops","waste_stream; treatment; recovery; disposal",generator and processor,EU waste codes,draft
 F6,Flows & Resources,Emission & Environmental Flux,Emissions and environmental releases,"emission; source_ref; quantity; abatement",emitting owner; Ecology verification,GHG Protocol,draft
 X1,Events & Phenomena,Occurrence / Event,"Generic events: what happened, when, where, who","occurrence; participant; time; place; cause_ref",primary actor or observing registrar,MU Event; OWL-Time,draft
 X2,Events & Phenomena,Observed Phenomenon,Recurring natural or social patterns,"phenomenon; observation_series; extent; trend",observing steward,SSN; statistics,candidate
