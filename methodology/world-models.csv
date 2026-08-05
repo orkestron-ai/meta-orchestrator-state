@@ -98,8 +98,8 @@ A15,Polity (ext),Interstate Relations & Treaties,"Foreign affairs, treaties, mem
 A16,Polity (ext),Border Customs & Migration,"Border crossings, customs, residency and migration status","crossing; customs_declaration; residency_status; visa",Border sub-agent; person status self-visible,WCO; ICAO,candidate
 A17,Polity (ext),Defense & Security Forces,"Forces, assets, mandates (breadth placeholder; detail = G3)","force; asset_ref; mandate; readiness",Defense sub-agent (tightest S defaults),NATO stds (ref),candidate
 A18,Polity (ext),Offense Investigation & Enforcement,"Offenses, investigations, cases, penalties, corrections","offense; investigation; case_ref(A6); penalty; correction",Enforcement sub-agent; due process via A6/S2,ECRIS-like; national,draft
-B13,Society (ext),Social Provision & Benefit,"Delivery of floors, benefits, social care","benefit; entitlement; delivery; care_service",Social sub-agent; person sees own record,ESSPROS,candidate
-B14,Society (ext),Public Health & Epidemiology,"Population health, outbreaks, immunization","population_health; outbreak; immunization; measure",Health sub-agent (S5 cohort-grain),WHO ICD; FHIR,candidate
+B13,Society (ext),Social Provision & Benefit,"Delivery of floors, benefits, social care","benefit; entitlement; delivery; care_service",Social sub-agent; person sees own record,ESSPROS,draft
+B14,Society (ext),Public Health & Epidemiology,"Population health, outbreaks, immunization","population_health; outbreak; immunization; measure",Health sub-agent (S5 cohort-grain),WHO ICD; FHIR,draft
 D5,Civilization (ext),Sport Games & Recreation,"Sports, leagues, competitions, recreation","sport; league; competition; result; facility_ref",organizing bodies,SportsML,candidate
 D6,Civilization (ext),Religion & Belief Institutions,"Confessions, congregations, practices","confession; congregation_ref(O1); practice; site_ref",the communities themselves (strong S defaults),CIDOC-CRM,candidate
 D7,Civilization (ext),Tourism & Hospitality,"Destinations, stays, hospitality services","destination; stay; accommodation_ref(U); experience",providers; Territory sub-agent for destinations,UNWTO; schema.org,candidate
