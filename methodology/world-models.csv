@@ -72,8 +72,8 @@ A10,Polity (ext),Lawmaking & Legislative Voting,"Bills, readings, amendments, vo
 A11,Polity (ext),Public Office & Official,"Offices, officeholders, appointments, accountability","office; officeholder; appointment; declaration",appointing authority; register public per A12,CPSV; W3C ORG,candidate
 A12,Polity (ext),State Registry Mandate,Which registers the state must keep and how,"mandate; registrar_assignment; public_faith_rule",constitution/legislature,legal,candidate
 B10,Society (ext),Personal Health,Health status and care of a person,"condition; encounter; observation; care_plan",the person (strictest S defaults),HL7 FHIR,draft
-B11,Society (ext),Personal Property & Assets,Person-side view of owned things,"holding; acquisition; disposal; encumbrance",the person,LADM; registers via R,candidate
-B12,Society (ext),Life Events & Civil Status,"Birth, marriage, divorce, death","life_event; civil_status; certificate_ref",the person; civil registrar keeps the register,civil registration standards,candidate
+B11,Society (ext),Personal Property & Assets,Person-side view of owned things,"holding; acquisition; disposal; encumbrance",the person,LADM; registers via R,draft
+B12,Society (ext),Life Events & Civil Status,"Birth, marriage, divorce, death","life_event; civil_status; certificate_ref",the person; civil registrar keeps the register,civil registration standards,draft
 C7,Economy (ext),Price Valuation & Appraisal,"Price observations, appraisals, indices","price_observation; appraisal; index; methodology",observing/appraising organization,SDMX; appraisal standards,candidate
 C8,Economy (ext),Insurance & Risk Pooling,"Policies, pools, claims as value routing","policy; pool; premium; claim",insurer and insured (bilateral),ACORD,candidate
 P11,Planet & Nature,Space & Orbital Objects,"Satellites, orbits, debris, space weather","space_object; orbit; ownership_ref; space_weather",Space sub-agent; asset owners per S1,UN registry; CCSDS,candidate
